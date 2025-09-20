@@ -1,0 +1,213 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=200.0)
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(0.0, 0.0), 
+    point2=(150.0, 150.0))
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=1000.0)
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(0.0, 0.0), 
+    point2=(150.0, 150.0))
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='cube', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['cube'].BaseSolidExtrude(depth=150.0, sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].parts['cube'].Round(edgeList=(
+    mdb.models['Model-1'].parts['cube'].edges[4], ), radius=15.0)
+mdb.models['Model-1'].parts['cube'].RemoveFaces(deleteCells=False, faceList=
+    mdb.models['Model-1'].parts['cube'].faces.getSequenceFromMask(mask=(
+    '[#1 ]', ), ))
+del mdb.models['Model-1'].parts['cube']
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=1000.0)
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(0.0, 0.0), 
+    point2=(150.0, 150.0))
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='cube', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['cube'].BaseSolidExtrude(depth=150.0, sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].Material(name='Material-1')
+mdb.models['Model-1'].materials['Material-1'].Density(table=((50.0, ), ))
+mdb.models['Model-1'].Material(name='Material-2')
+mdb.models['Model-1'].materials['Material-2'].Density(table=((50.0, ), ))
+mdb.models['Model-1'].materials['Material-2'].UserMaterial(mechanicalConstants=
+    (0.0, ))
+mdb.models['Model-1'].materials['Material-2'].Elastic(table=((15000.0, 0.2), ))
+del mdb.models['Model-1'].materials['Material-1']
+mdb.models['Model-1'].HomogeneousSolidSection(material='Material-2', name=
+    'Section-1', thickness=None)
+mdb.models['Model-1'].parts['cube'].Set(cells=
+    mdb.models['Model-1'].parts['cube'].cells.getSequenceFromMask(('[#1 ]', ), 
+    ), name='Set-1')
+mdb.models['Model-1'].parts['cube'].SectionAssignment(offset=0.0, offsetField=
+    '', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['cube'].sets['Set-1'], sectionName='Section-1', 
+    thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].parts['cube'].PartitionEdgeByParam(edges=
+    mdb.models['Model-1'].parts['cube'].edges.getSequenceFromMask(('[#10 ]', ), 
+    ), parameter=0.395976206461589)
+mdb.models['Model-1'].parts['cube'].Chamfer(edgeList=(
+    mdb.models['Model-1'].parts['cube'].edges[4], 
+    mdb.models['Model-1'].parts['cube'].edges[5]), length=25.0)
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=1000.0)
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(0.0, 0.0), 
+    point2=(150.0, 150.0))
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='Part-2', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-2'].BaseSolidExtrude(depth=150.0, sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].Material(name='Material-3')
+mdb.models['Model-1'].materials['Material-3'].Density(table=((50.0, ), ))
+mdb.models['Model-1'].materials['Material-3'].Elastic(table=((15000.0, 0.2), ))
+mdb.models['Model-1'].HomogeneousSolidSection(material='Material-3', name=
+    'Section-2', thickness=None)
+mdb.models['Model-1'].parts['Part-2'].Set(cells=
+    mdb.models['Model-1'].parts['Part-2'].cells.getSequenceFromMask(('[#1 ]', 
+    ), ), name='Set-1')
+mdb.models['Model-1'].parts['Part-2'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['Part-2'].sets['Set-1'], sectionName=
+    'Section-2', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Part-2-1', 
+    part=mdb.models['Model-1'].parts['Part-2'])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='cube-1', part=
+    mdb.models['Model-1'].parts['cube'])
+mdb.models['Model-1'].rootAssembly.translate(instanceList=('cube-1', ), vector=
+    (0.0, 0.0, 150.0))
+mdb.models['Model-1'].parts['Part-2'].Set(cells=
+    mdb.models['Model-1'].parts['Part-2'].cells.getSequenceFromMask(('[#1 ]', 
+    ), ), name='Set-2')
+mdb.models['Model-1'].parts['Part-2'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['Part-2'].sets['Set-2'], sectionName=
+    'Section-1', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Part-2-2', 
+    part=mdb.models['Model-1'].parts['Part-2'])
+mdb.models['Model-1'].parts['Part-2'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['Part-2'].faces[4])
+mdb.models['Model-1'].parts['Part-2'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['Part-2'].faces[0])
+mdb.models['Model-1'].parts['Part-2'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['Part-2'].faces[0])
+mdb.models['Model-1'].parts['Part-2'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['Part-2'].faces[2])
+mdb.models['Model-1'].parts['Part-2'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['Part-2'].faces[1])
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.models['Model-1'].parts['Part-2'].checkGeometry()
+mdb.models['Model-1'].parts['Part-2'].suppressFeatures(('Mirror-5', 'Mirror-4', 
+    'Solid extrude-1'))
+del mdb.models['Model-1'].parts['Part-2']
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=1000.0)
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(0.0, 0.0), 
+    point2=(150.0, 150.0))
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='Part-2', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-2'].BaseSolidExtrude(depth=150.0, sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].parts['Part-2'].Set(cells=
+    mdb.models['Model-1'].parts['Part-2'].cells.getSequenceFromMask(('[#1 ]', 
+    ), ), name='Set-1')
+mdb.models['Model-1'].parts['Part-2'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['Part-2'].sets['Set-1'], sectionName=
+    'Section-2', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].parts['Part-2'].Set(cells=
+    mdb.models['Model-1'].parts['Part-2'].cells.getSequenceFromMask(('[#1 ]', 
+    ), ), name='Set-2')
+mdb.models['Model-1'].parts['Part-2'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['Part-2'].sets['Set-2'], sectionName=
+    'Section-1', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.models['Model-1'].parts['Part-2'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['Part-2'].faces[5])
+mdb.models['Model-1'].parts['Part-2'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['Part-2'].faces[0])
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.models['Model-1'].parts['cube'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['cube'].faces[2])
+mdb.models['Model-1'].parts['cube'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['cube'].faces[0])
+mdb.models['Model-1'].parts['cube'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['cube'].faces[0])
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.models['Model-1'].parts['Part-2'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['Part-2'].faces[1])
+mdb.models['Model-1'].parts['Part-2'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['Part-2'].faces[0])
+mdb.models['Model-1'].parts['Part-2'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['Part-2'].faces[0])
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=1000.0)
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(0.0, 0.0), 
+    point2=(150.0, 150.0))
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='right', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['right'].BaseSolidExtrude(depth=150.0, sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].parts['right'].Chamfer(edgeList=(
+    mdb.models['Model-1'].parts['right'].edges[6], ), length=25.0)
+mdb.models['Model-1'].parts['right'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['right'].faces[2])
+mdb.models['Model-1'].parts['right'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['right'].faces[0])
+mdb.models['Model-1'].parts['right'].Mirror(keepOriginal=ON, mirrorPlane=
+    mdb.models['Model-1'].parts['right'].faces[0])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='right-1', part=
+    mdb.models['Model-1'].parts['right'])
+mdb.models['Model-1'].rootAssembly.translate(instanceList=('right-1', ), 
+    vector=(0.0, 0.0, -600.0))
+mdb.models['Model-1'].StaticStep(initialInc=100.0, maxNumInc=10000, name=
+    'Step-1', noStop=OFF, previous='Initial', timeIncrementationMethod=FIXED, 
+    timePeriod=100.0)
+mdb.models['Model-1'].FieldOutputRequest(createStepName='Step-1', name=
+    'F-Output-2', variables=('S', 'MISES', 'MISESMAX', 'TSHR', 'CTSHR', 
+    'ALPHA', 'TRIAX', 'VS', 'PS', 'CS11', 'ALPHAN', 'SSAVG', 'MISESONLY', 
+    'PRESSONLY', 'SEQUT', 'E', 'VE', 'PE', 'VEEQ', 'PEEQ', 'PEEQT', 'PEEQMAX', 
+    'PEMAG', 'PEQC', 'EE', 'IE', 'THE', 'NE', 'LE', 'TE', 'TEEQ', 'TEVOL', 
+    'EEQUT', 'ER', 'SE', 'SPE', 'SEPE', 'SEE', 'SEP', 'SALPHA', 'DAMAGEC', 
+    'DAMAGET', 'DAMAGEFT', 'DAMAGEFC', 'DAMAGEMT', 'DAMAGEMC', 'DAMAGESHR', 
+    'SDEG', 'JK', 'CFAILURE', 'DBS', 'DBT', 'DBSF', 'OPENBC', 'CRSTS', 'ENRRT', 
+    'EFENRRTR', 'BDSTAT', 'DMICRT', 'HSNFTCRT', 'HSNFCCRT', 'HSNMTCRT', 
+    'HSNMCCRT', 'ERPRATIO', 'SHRRATIO', 'CSDMG', 'CSMAXSCRT', 'CSMAXUCRT', 
+    'CSQUADSCRT', 'CSQUADUCRT', 'PHILSM', 'PSILSM'))
+mdb.models['Model-1'].HistoryOutputRequest(createStepName='Step-1', name=
+    'H-Output-2', variables=('DBS11', 'DBS12', 'DBT', 'DBSF', 'OPENBC', 
+    'CRSTS11', 'CRSTS12', 'CRSTS13', 'ENRRT11', 'ENRRT12', 'ENRRT13', 
+    'EFENRRTR', 'BDSTAT', 'CSDMG', 'CSMAXSCRT', 'CSMAXUCRT', 'CSQUADSCRT', 
+    'CSQUADUCRT'))
+mdb.models['Model-1'].fieldOutputRequests['F-Output-1'].setValues(variables=(
+    'DAMAGEC', 'DAMAGET', 'DAMAGEFT', 'DAMAGEFC', 'DAMAGEMT', 'DAMAGEMC', 
+    'DAMAGESHR', 'SDEG', 'JK', 'CFAILURE', 'DBS', 'DBT', 'DBSF', 'OPENBC', 
+    'CRSTS', 'ENRRT', 'EFENRRTR', 'BDSTAT', 'DMICRT', 'HSNFTCRT', 'HSNFCCRT', 
+    'HSNMTCRT', 'HSNMCCRT', 'ERPRATIO', 'SHRRATIO', 'CSDMG', 'CSMAXSCRT', 
+    'CSMAXUCRT', 'CSQUADSCRT', 'CSQUADUCRT', 'PHILSM', 'PSILSM', 'MVF'))
+mdb.models['Model-1'].fieldOutputRequests['F-Output-2'].setValues(variables=(
+    'DAMAGEC', 'DAMAGET', 'DAMAGEFT', 'DAMAGEFC', 'DAMAGEMT', 'DAMAGEMC', 
+    'DAMAGESHR', 'SDEG', 'JK', 'CFAILURE', 'DBS', 'DBT', 'DBSF', 'OPENBC', 
+    'CRSTS', 'ENRRT', 'EFENRRTR', 'BDSTAT', 'DMICRT', 'HSNFTCRT', 'HSNFCCRT', 
+    'HSNMTCRT', 'HSNMCCRT', 'ERPRATIO', 'SHRRATIO', 'CSDMG', 'CSMAXSCRT', 
+    'CSMAXUCRT', 'CSQUADSCRT', 'CSQUADUCRT', 'PHILSM', 'PSILSM'))
+mdb.models['Model-1'].historyOutputRequests['H-Output-1'].setValues(variables=(
+    'DBS11', 'DBS12', 'DBT', 'DBSF', 'OPENBC', 'CRSTS11', 'CRSTS12', 'CRSTS13', 
+    'ENRRT11', 'ENRRT12', 'ENRRT13', 'EFENRRTR', 'BDSTAT', 'CSDMG', 
+    'CSMAXSCRT', 'CSMAXUCRT', 'CSQUADSCRT', 'CSQUADUCRT'))
+# Save by Admin on 2024_10_08-19.09.01; build 2018 2017_11_07-22.51.41 127140

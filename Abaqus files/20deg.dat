@@ -1,0 +1,1378 @@
+1
+
+   Abaqus 3DEXPERIENCE R2018x                                  Date 20-Nov-2024   Time 18:41:48
+   For use by INDIAN INSTITUTE OF TECHNOLOGY under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine DESKTOP-M4VAJAV 
+                          you are authorized to run
+                          Abaqus/Standard until 09-Apr-2025
+
+                          Your site id is: 200000000145531 
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      http://www.3ds.com/products/simulia/locations/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *               Abaqus 3DEXPERIENCE R2018x                * 
+                *                                                         * 
+                *          BUILD ID: 2017_11_07-22.51.41 127140           * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release 3DEXPERIENCE R2018x manuals                    * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a commercial fee.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+  *Node
+  *Element, type=C3D8R
+  *Nset, nset=ASSEMBLY_DEG20-1_SET-1
+  *Elset, elset=ASSEMBLY_DEG20-1_SET-1
+  *Nset, nset=ASSEMBLY_SET-1
+  *Nset, nset=ASSEMBLY_SET-2
+  *Elset, elset=ASSEMBLY_SET-1
+  *Elset, elset=ASSEMBLY_SET-2
+  *Elset, elset=ASSEMBLY__SURF-1_S3
+  *Elset, elset=ASSEMBLY__SURF-1_S4
+  *material, name=MATERIAL-1
+  *elastic
+  *solidsection, elset=ASSEMBLY_DEG20-1_SET-1, material=MATERIAL-1
+  *solidsection, elset=ASSEMBLY_DEG20-1_SET-1, material=MATERIAL-1
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF-1
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF-1
+  *boundary
+  *boundary
+  *boundary
+  *boundary
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF-1
+  *output, field
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+  *output, field
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+  *output, field
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+  
+                               E L E M E N T   Q U A L I T Y  C H E C K S        
+  
+  
+ ***NOTES: DISTORTED ISOPARAMETRIC ELEMENTS: ANGLE BETWEEN ISOPARAMETRIC LINES 
+           IS LESS THAN 45 DEGREES OR GREATER THAN 135 DEGREES.
+  
+           TETRAHEDRAL QUALITY MEASURE: VOLUME OF TETRAHEDRON DIVIDED BY THE 
+           VOLUME OF EQUILATERAL TETRAHEDRON WITH SAME CIRCUMSPHERE RADIUS; 
+           0 FOR DEGENERATE TETRAHEDRON AND 1 FOR EQUILATERIAL TETRAHEDRON. IT 
+           IS RECOMMENDED THAT THE TETRAHEDRAL QUALITY MEASURE BE GREATER THAN 
+           0.02, THE MIN INTERIOR (DIHEDRAL) ANGLE BE GREATER THAN 10 DEGREES, 
+           AND THE MAX INTERIOR (DIHEDRAL) ANGLE BE LESS THAN 160 DEGREES. 
+  
+           MODIFIED TETRAHEDRAL QUALITY MEASURE: ANGLES BETWEEN THE TWO LINE 
+           SEGMENTS ON EACH EDGE; THE EDGES OF MODIFIED TETRAHEDRAL SHOULD BE 
+           AS STRAIGHT AS POSSIBLE. IT IS RECOMMENDED THAT THE ANGLE BETWEEN 
+           THE TWO LINE SEGMENTS ON EACH EDGE IS BETWEEN 160 AND 180 DEGREES. 
+  
+           TRIANGULAR QUALITY MEASURE: AREA OF TRIANGLE DIVIDED BY THE AREA OF 
+           EQUILATERAL TRIANGLE WITH SAME CIRCUMCIRCLE RADIUS; 0 FOR DEGENERATE 
+           TRIANGLE AND 1 FOR EQUILATERAL TRIANGLE. IT IS RECOMMENDED THAT THE
+           TRIANGULAR QUALITY MEASURE BE GREATER THAN 0.01, THE MIN INTERIOR 
+           ANGLE BE GREATER THAN 10 DEGREES, AND THE MAX INTERIOR ANGLE BE LESS 
+           THAN 160 DEGREES. 
+  
+           NODAL ADJUSTMENTS ARISING FROM CONTACT INTERACTIONS AND/OR TIE 
+           CONSTRAINTS CAN CAUSE SEVERE ELEMENT DISTORTION. IT MAY BE NECESSARY 
+           TO REMESH IN ORDER TO REDUCE THE AMOUNT OF ADJUSTMENT. 
+
+ ***WARNING: 1101 elements are distorted. Either the isoparametric angles are 
+             out of the suggested limits or the triangular or tetrahedral 
+             quality measure is bad. The elements have been identified in 
+             element set WarnElemDistorted.
+  
+ --------------------------------------------------------------------------------
+ Distorted isoparametric elements
+  
+      Element       Min/max angle   Adjusted nodes 
+ ----------------- ---------------- -------------- 
+     DEG20-1.12228          44.9527       NO       
+     DEG20-1.12234          44.9044       NO       
+     DEG20-1.12240          44.8832       NO       
+     DEG20-1.12246          44.8746       NO       
+     DEG20-1.12252          44.8714       NO       
+     DEG20-1.12258          44.8702       NO       
+     DEG20-1.12264          44.8698       NO       
+     DEG20-1.12270          44.8696       NO       
+     DEG20-1.12276          44.8696       NO       
+     DEG20-1.12282          44.8696       NO       
+     DEG20-1.12288          44.8696       NO       
+     DEG20-1.12294          44.8696       NO       
+     DEG20-1.12300          44.8696       NO       
+     DEG20-1.12306          44.8695       NO       
+     DEG20-1.12312          44.8703       NO       
+     DEG20-1.12318          44.8742       NO       
+     DEG20-1.12324          44.8842       NO       
+     DEG20-1.12330          44.8918       NO       
+     DEG20-1.12336          44.7323       NO       
+     DEG20-1.12342          43.4934       NO       
+     DEG20-1.12348          43.1673       NO       
+     DEG20-1.12354          42.7546       NO       
+     DEG20-1.12359          44.6562       NO       
+     DEG20-1.12360          42.4314       NO       
+     DEG20-1.12365          44.4429       NO       
+     DEG20-1.12366          42.2309       NO       
+     DEG20-1.12371            44.34       NO       
+     DEG20-1.12372          42.1242       NO       
+     DEG20-1.12377           44.296       NO       
+     DEG20-1.12378          42.0733       NO       
+     DEG20-1.12383          44.2789       NO       
+     DEG20-1.12384          42.0511       NO       
+     DEG20-1.12389          44.2727       NO       
+     DEG20-1.12390          42.0421       NO       
+     DEG20-1.12395          44.2706       NO       
+     DEG20-1.12396          42.0386       NO       
+     DEG20-1.12401          44.2699       NO       
+     DEG20-1.12402          42.0374       NO       
+     DEG20-1.12407          44.2697       NO       
+     DEG20-1.12408           42.037       NO       
+     DEG20-1.12413          44.2696       NO       
+     DEG20-1.12414          42.0369       NO       
+     DEG20-1.12419          44.2696       NO       
+     DEG20-1.12420          42.0369       NO       
+     DEG20-1.12425          44.2696       NO       
+     DEG20-1.12426          42.0369       NO       
+     DEG20-1.12431          44.2696       NO       
+     DEG20-1.12432          42.0369       NO       
+     DEG20-1.12437          44.2696       NO       
+     DEG20-1.12438          42.0369       NO       
+     DEG20-1.12443          44.2696       NO       
+     DEG20-1.12444          42.0368       NO       
+     DEG20-1.12449          44.2696       NO       
+     DEG20-1.12450          42.0367       NO       
+     DEG20-1.12455          44.2703       NO       
+     DEG20-1.12456          42.0374       NO       
+     DEG20-1.12461           44.276       NO       
+     DEG20-1.12462          42.0415       NO       
+     DEG20-1.12467          44.2941       NO       
+     DEG20-1.12468           42.052       NO       
+     DEG20-1.12473          44.3213       NO       
+     DEG20-1.12474          42.0601       NO       
+     DEG20-1.12479          44.0867       NO       
+     DEG20-1.12480          41.8924       NO       
+     DEG20-1.12485          43.2663       NO       
+     DEG20-1.12486          40.7727       NO       
+     DEG20-1.12491          42.8762       NO       
+     DEG20-1.12492          40.4256       NO       
+     DEG20-1.12497          42.3374       NO       
+     DEG20-1.12498          39.9965       NO       
+     DEG20-1.12503          41.9411       NO       
+     DEG20-1.12504           39.662       NO       
+     DEG20-1.12509          41.7158       NO       
+     DEG20-1.12510          39.4547       NO       
+     DEG20-1.12515          41.6071       NO       
+     DEG20-1.12516          39.3442       NO       
+     DEG20-1.12520          44.9833       NO       
+     DEG20-1.12521          41.5607       NO       
+     DEG20-1.12522          39.2915       NO       
+     DEG20-1.12526          44.9696       NO       
+     DEG20-1.12527          41.5425       NO       
+     DEG20-1.12528          39.2685       NO       
+     DEG20-1.12532          44.9656       NO       
+     DEG20-1.12533          41.5358       NO       
+     DEG20-1.12534          39.2591       NO       
+     DEG20-1.12538          44.9645       NO       
+     DEG20-1.12539          41.5336       NO       
+     DEG20-1.12540          39.2555       NO       
+     DEG20-1.12544          44.9642       NO       
+     DEG20-1.12545          41.5328       NO       
+     DEG20-1.12546          39.2541       NO       
+     DEG20-1.12550          44.9642       NO       
+     DEG20-1.12551          41.5326       NO       
+     DEG20-1.12552          39.2536       NO       
+     DEG20-1.12556          44.9642       NO       
+     DEG20-1.12557          41.5326       NO       
+     DEG20-1.12558          39.2536       NO       
+     DEG20-1.12562          44.9642       NO       
+     DEG20-1.12563          41.5326       NO       
+     DEG20-1.12564          39.2536       NO       
+     DEG20-1.12568          44.9642       NO       
+     DEG20-1.12569          41.5326       NO       
+     DEG20-1.12570          39.2536       NO       
+     DEG20-1.12574          44.9642       NO       
+     DEG20-1.12575          41.5326       NO       
+     DEG20-1.12576          39.2536       NO       
+     DEG20-1.12580          44.9641       NO       
+     DEG20-1.12581          41.5326       NO       
+     DEG20-1.12582          39.2536       NO       
+     DEG20-1.12586           44.964       NO       
+     DEG20-1.12587          41.5325       NO       
+     DEG20-1.12588          39.2536       NO       
+     DEG20-1.12592          44.9637       NO       
+     DEG20-1.12593          41.5324       NO       
+     DEG20-1.12594          39.2535       NO       
+     DEG20-1.12598          44.9646       NO       
+     DEG20-1.12599          41.5332       NO       
+     DEG20-1.12600          39.2542       NO       
+     DEG20-1.12604           44.974       NO       
+     DEG20-1.12605          41.5391       NO       
+     DEG20-1.12606          39.2584       NO       
+     DEG20-1.12611          41.5588       NO       
+     DEG20-1.12612          39.2695       NO       
+     DEG20-1.12617          41.5891       NO       
+     DEG20-1.12618          39.2779       NO       
+     DEG20-1.12622          44.7124       NO       
+     DEG20-1.12623          41.3376       NO       
+     DEG20-1.12624          39.1021       NO       
+     DEG20-1.12629          40.7768       NO       
+     DEG20-1.12630          38.0765       NO       
+     DEG20-1.12634          44.3363       NO       
+     DEG20-1.12635          40.3399       NO       
+     DEG20-1.12636          37.7068       NO       
+     DEG20-1.12640           43.525       NO       
+     DEG20-1.12641          39.7743       NO       
+     DEG20-1.12642          37.2732       NO       
+     DEG20-1.12646          42.9745       NO       
+     DEG20-1.12647          39.3615       NO       
+     DEG20-1.12648          36.9378       NO       
+     DEG20-1.12652          42.6892       NO       
+     DEG20-1.12653          39.1267       NO       
+     DEG20-1.12654          36.7297       NO       
+     DEG20-1.12658           42.567       NO       
+     DEG20-1.12659          39.0131       NO       
+     DEG20-1.12660          36.6185       NO       
+     DEG20-1.12664          42.5216       NO       
+     DEG20-1.12665          38.9643       NO       
+     DEG20-1.12666          36.5653       NO       
+     DEG20-1.12670          42.5066       NO       
+     DEG20-1.12671          38.9452       NO       
+     DEG20-1.12672          36.5419       NO       
+     DEG20-1.12676          42.5022       NO       
+     DEG20-1.12677          38.9382       NO       
+     DEG20-1.12678          36.5323       NO       
+     DEG20-1.12682           42.501       NO       
+     DEG20-1.12683          38.9358       NO       
+     DEG20-1.12684          36.5287       NO       
+     DEG20-1.12688          42.5007       NO       
+     DEG20-1.12689          38.9349       NO       
+     DEG20-1.12690          36.5273       NO       
+     DEG20-1.12694          42.5006       NO       
+     DEG20-1.12695          38.9347       NO       
+     DEG20-1.12696          36.5268       NO       
+     DEG20-1.12700          42.5006       NO       
+     DEG20-1.12701          38.9347       NO       
+     DEG20-1.12702          36.5267       NO       
+     DEG20-1.12706          42.5006       NO       
+     DEG20-1.12707          38.9348       NO       
+     DEG20-1.12708          36.5267       NO       
+     DEG20-1.12712          42.5006       NO       
+     DEG20-1.12713          38.9348       NO       
+     DEG20-1.12714          36.5267       NO       
+     DEG20-1.12718          42.5006       NO       
+     DEG20-1.12719          38.9348       NO       
+     DEG20-1.12720          36.5267       NO       
+     DEG20-1.12724          42.5005       NO       
+     DEG20-1.12725          38.9347       NO       
+     DEG20-1.12726          36.5267       NO       
+     DEG20-1.12730          42.5003       NO       
+     DEG20-1.12731          38.9346       NO       
+     DEG20-1.12732          36.5267       NO       
+     DEG20-1.12736             42.5       NO       
+     DEG20-1.12737          38.9345       NO       
+     DEG20-1.12738          36.5267       NO       
+     DEG20-1.12742          42.5008       NO       
+     DEG20-1.12743          38.9353       NO       
+     DEG20-1.12744          36.5274       NO       
+     DEG20-1.12748          42.5118       NO       
+     DEG20-1.12749          38.9425       NO       
+     DEG20-1.12750          36.5318       NO       
+     DEG20-1.12754           42.556       NO       
+     DEG20-1.12755          38.9658       NO       
+     DEG20-1.12756          36.5431       NO       
+     DEG20-1.12760          42.6509       NO       
+     DEG20-1.12761          38.9984       NO       
+     DEG20-1.12762            36.55       NO       
+     DEG20-1.12766          42.2252       NO       
+     DEG20-1.12767          38.7215       NO       
+     DEG20-1.12768          36.3698       NO       
+     DEG20-1.12772          43.0695       NO       
+     DEG20-1.12773          38.4214       NO       
+     DEG20-1.12774             35.3       NO       
+     DEG20-1.12778           42.302       NO       
+     DEG20-1.12779          37.9446       NO       
+     DEG20-1.12780          34.9298       NO       
+     DEG20-1.12784          41.4674       NO       
+     DEG20-1.12785          37.3805       NO       
+     DEG20-1.12786          34.5194       NO       
+     DEG20-1.12790          40.9011       NO       
+     DEG20-1.12791          36.9708       NO       
+     DEG20-1.12792          34.2033       NO       
+     DEG20-1.12796           40.604       NO       
+     DEG20-1.12797          36.7356       NO       
+     DEG20-1.12798           34.006       NO       
+     DEG20-1.12802          40.4743       NO       
+     DEG20-1.12803          36.6204       NO       
+     DEG20-1.12804          33.8996       NO       
+     DEG20-1.12808          40.4252       NO       
+     DEG20-1.12809          36.5704       NO       
+     DEG20-1.12810          33.8482       NO       
+     DEG20-1.12814          40.4086       NO       
+     DEG20-1.12815          36.5507       NO       
+     DEG20-1.12816          33.8255       NO       
+     DEG20-1.12820          40.4035       NO       
+     DEG20-1.12821          36.5434       NO       
+     DEG20-1.12822          33.8161       NO       
+     DEG20-1.12826          40.4022       NO       
+     DEG20-1.12827          36.5408       NO       
+     DEG20-1.12828          33.8125       NO       
+     DEG20-1.12832          40.4018       NO       
+     DEG20-1.12833          36.5399       NO       
+     DEG20-1.12834          33.8111       NO       
+     DEG20-1.12838          40.4017       NO       
+     DEG20-1.12839          36.5397       NO       
+     DEG20-1.12840          33.8106       NO       
+     DEG20-1.12844          40.4017       NO       
+     DEG20-1.12845          36.5396       NO       
+     DEG20-1.12846          33.8104       NO       
+     DEG20-1.12850          40.4016       NO       
+     DEG20-1.12851          36.5396       NO       
+     DEG20-1.12852          33.8104       NO       
+     DEG20-1.12856          40.4016       NO       
+     DEG20-1.12857          36.5396       NO       
+     DEG20-1.12858          33.8104       NO       
+     DEG20-1.12862          40.4016       NO       
+     DEG20-1.12863          36.5396       NO       
+     DEG20-1.12864          33.8104       NO       
+     DEG20-1.12868          40.4016       NO       
+     DEG20-1.12869          36.5397       NO       
+     DEG20-1.12870          33.8104       NO       
+     DEG20-1.12874          40.4014       NO       
+     DEG20-1.12875          36.5397       NO       
+     DEG20-1.12876          33.8103       NO       
+     DEG20-1.12880          40.4011       NO       
+     DEG20-1.12881          36.5395       NO       
+     DEG20-1.12882          33.8103       NO       
+     DEG20-1.12886          40.4029       NO       
+     DEG20-1.12887          36.5411       NO       
+     DEG20-1.12888          33.8111       NO       
+     DEG20-1.12892          40.4182       NO       
+     DEG20-1.12893          36.5504       NO       
+     DEG20-1.12894          33.8153       NO       
+     DEG20-1.12898           40.467       NO       
+     DEG20-1.12899          36.5732       NO       
+     DEG20-1.12900          33.8239       NO       
+     DEG20-1.12904          40.5574       NO       
+     DEG20-1.12905          36.5975       NO       
+     DEG20-1.12906          33.8253       NO       
+     DEG20-1.12910           40.092       NO       
+     DEG20-1.12911          36.3036       NO       
+     DEG20-1.12912          33.6559       NO       
+     DEG20-1.12916          41.1568       NO       
+     DEG20-1.12917          35.9479       NO       
+     DEG20-1.12918          32.2343       NO       
+     DEG20-1.12922          40.4109       NO       
+     DEG20-1.12923          35.5006       NO       
+     DEG20-1.12924          31.9082       NO       
+     DEG20-1.12928          39.6372       NO       
+     DEG20-1.12929          34.9959       NO       
+     DEG20-1.12930           31.561       NO       
+     DEG20-1.12934          39.1035       NO       
+     DEG20-1.12935           34.625       NO       
+     DEG20-1.12936          31.2929       NO       
+     DEG20-1.12940          38.8149       NO       
+     DEG20-1.12941          34.4074       NO       
+     DEG20-1.12942          31.1233       NO       
+     DEG20-1.12946          38.6845       NO       
+     DEG20-1.12947          34.2983       NO       
+     DEG20-1.12948          31.0303       NO       
+     DEG20-1.12952          38.6332       NO       
+     DEG20-1.12953          34.2497       NO       
+     DEG20-1.12954          30.9846       NO       
+     DEG20-1.12958           38.615       NO       
+     DEG20-1.12959            34.23       NO       
+     DEG20-1.12960          30.9641       NO       
+     DEG20-1.12964          38.6092       NO       
+     DEG20-1.12965          34.2226       NO       
+     DEG20-1.12966          30.9556       NO       
+     DEG20-1.12970          38.6075       NO       
+     DEG20-1.12971          34.2199       NO       
+     DEG20-1.12972          30.9522       NO       
+     DEG20-1.12976           38.607       NO       
+     DEG20-1.12977           34.219       NO       
+     DEG20-1.12978           30.951       NO       
+     DEG20-1.12982          38.6069       NO       
+     DEG20-1.12983          34.2187       NO       
+     DEG20-1.12984          30.9505       NO       
+     DEG20-1.12988          38.6069       NO       
+     DEG20-1.12989          34.2186       NO       
+     DEG20-1.12990          30.9503       NO       
+     DEG20-1.12994          38.6068       NO       
+     DEG20-1.12995          34.2187       NO       
+     DEG20-1.12996          30.9503       NO       
+     DEG20-1.13000          38.6068       NO       
+     DEG20-1.13001          34.2187       NO       
+     DEG20-1.13002          30.9503       NO       
+     DEG20-1.13006          38.6068       NO       
+     DEG20-1.13007          34.2186       NO       
+     DEG20-1.13008          30.9502       NO       
+     DEG20-1.13012          38.6067       NO       
+     DEG20-1.13013          34.2186       NO       
+     DEG20-1.13014          30.9502       NO       
+     DEG20-1.13018          38.6065       NO       
+     DEG20-1.13019          34.2186       NO       
+     DEG20-1.13020          30.9501       NO       
+     DEG20-1.13024          38.6066       NO       
+     DEG20-1.13025          34.2188       NO       
+     DEG20-1.13026          30.9502       NO       
+     DEG20-1.13030          38.6098       NO       
+     DEG20-1.13031          34.2209       NO       
+     DEG20-1.13032          30.9506       NO       
+     DEG20-1.13036          38.6238       NO       
+     DEG20-1.13037          34.2271       NO       
+     DEG20-1.13038          30.9521       NO       
+     DEG20-1.13042           38.659       NO       
+     DEG20-1.13043          34.2387       NO       
+     DEG20-1.13044          30.9548       NO       
+     DEG20-1.13048          38.7171       NO       
+     DEG20-1.13049          34.2437       NO       
+     DEG20-1.13050          30.9492       NO       
+     DEG20-1.13054          38.2715       NO       
+     DEG20-1.13055          33.9791       NO       
+     DEG20-1.13056          30.8171       NO       
+     DEG20-1.13060           38.535       NO       
+     DEG20-1.13061          32.8907       NO       
+     DEG20-1.13062          28.6345       NO       
+     DEG20-1.13066          37.9334       NO       
+     DEG20-1.13067          32.5295       NO       
+     DEG20-1.13068          28.3809       NO       
+     DEG20-1.13071          44.8622       NO       
+     DEG20-1.13072          37.3263       NO       
+     DEG20-1.13073          32.1398       NO       
+     DEG20-1.13074          28.1291       NO       
+     DEG20-1.13077          44.2648       NO       
+     DEG20-1.13078          36.8905       NO       
+     DEG20-1.13079          31.8467       NO       
+     DEG20-1.13080          27.9363       NO       
+     DEG20-1.13083          43.9458       NO       
+     DEG20-1.13084          36.6391       NO       
+     DEG20-1.13085          31.6674       NO       
+     DEG20-1.13086          27.8133       NO       
+     DEG20-1.13089          43.8072       NO       
+     DEG20-1.13090          36.5162       NO       
+     DEG20-1.13091          31.5727       NO       
+     DEG20-1.13092          27.7449       NO       
+     DEG20-1.13095          43.7555       NO       
+     DEG20-1.13096           36.463       NO       
+     DEG20-1.13097          31.5282       NO       
+     DEG20-1.13098          27.7108       NO       
+     DEG20-1.13101          43.7379       NO       
+     DEG20-1.13102           36.442       NO       
+     DEG20-1.13103           31.509       NO       
+     DEG20-1.13104          27.6953       NO       
+     DEG20-1.13107          43.7322       NO       
+     DEG20-1.13108          36.4343       NO       
+     DEG20-1.13109          31.5013       NO       
+     DEG20-1.13110          27.6887       NO       
+     DEG20-1.13113          43.7304       NO       
+     DEG20-1.13114          36.4316       NO       
+     DEG20-1.13115          31.4984       NO       
+     DEG20-1.13116          27.6861       NO       
+     DEG20-1.13119            43.73       NO       
+     DEG20-1.13120          36.4307       NO       
+     DEG20-1.13121          31.4974       NO       
+     DEG20-1.13122           27.685       NO       
+     DEG20-1.13125          43.7299       NO       
+     DEG20-1.13126          36.4305       NO       
+     DEG20-1.13127          31.4971       NO       
+     DEG20-1.13128          27.6847       NO       
+     DEG20-1.13131          43.7298       NO       
+     DEG20-1.13132          36.4304       NO       
+     DEG20-1.13133           31.497       NO       
+     DEG20-1.13134          27.6846       NO       
+     DEG20-1.13137          43.7298       NO       
+     DEG20-1.13138          36.4304       NO       
+     DEG20-1.13139           31.497       NO       
+     DEG20-1.13140          27.6846       NO       
+     DEG20-1.13143          43.7298       NO       
+     DEG20-1.13144          36.4304       NO       
+     DEG20-1.13145           31.497       NO       
+     DEG20-1.13146          27.6846       NO       
+     DEG20-1.13149          43.7297       NO       
+     DEG20-1.13150          36.4303       NO       
+     DEG20-1.13151           31.497       NO       
+     DEG20-1.13152          27.6846       NO       
+     DEG20-1.13155          43.7296       NO       
+     DEG20-1.13156          36.4303       NO       
+     DEG20-1.13157           31.497       NO       
+     DEG20-1.13158          27.6846       NO       
+     DEG20-1.13161          43.7292       NO       
+     DEG20-1.13162          36.4301       NO       
+     DEG20-1.13163          31.4969       NO       
+     DEG20-1.13164          27.6845       NO       
+     DEG20-1.13167          43.7284       NO       
+     DEG20-1.13168          36.4297       NO       
+     DEG20-1.13169          31.4966       NO       
+     DEG20-1.13170          27.6842       NO       
+     DEG20-1.13173          43.7284       NO       
+     DEG20-1.13174          36.4301       NO       
+     DEG20-1.13175          31.4962       NO       
+     DEG20-1.13176          27.6833       NO       
+     DEG20-1.13179          43.7358       NO       
+     DEG20-1.13180          36.4343       NO       
+     DEG20-1.13181           31.496       NO       
+     DEG20-1.13182          27.6819       NO       
+     DEG20-1.13185          43.7678       NO       
+     DEG20-1.13186          36.4459       NO       
+     DEG20-1.13187          31.4952       NO       
+     DEG20-1.13188          27.6805       NO       
+     DEG20-1.13191          43.8655       NO       
+     DEG20-1.13192          36.4577       NO       
+     DEG20-1.13193          31.4787       NO       
+     DEG20-1.13194           27.671       NO       
+     DEG20-1.13197           43.449       NO       
+     DEG20-1.13198          36.0441       NO       
+     DEG20-1.13199          31.2371       NO       
+     DEG20-1.13200          27.5881       NO       
+     DEG20-1.15793          44.4575       NO       
+     DEG20-1.15794          44.2983       NO       
+     DEG20-1.15795          44.2374       NO       
+     DEG20-1.15796          44.2156       NO       
+     DEG20-1.15797          44.2082       NO       
+     DEG20-1.15798          44.2059       NO       
+     DEG20-1.15799          44.2051       NO       
+     DEG20-1.15800          44.2049       NO       
+     DEG20-1.15801          44.2049       NO       
+     DEG20-1.15802          44.2049       NO       
+     DEG20-1.15803          44.2049       NO       
+     DEG20-1.15804          44.2049       NO       
+     DEG20-1.15805          44.2049       NO       
+     DEG20-1.15806          44.2049       NO       
+     DEG20-1.15807          44.2049       NO       
+     DEG20-1.15808          44.2049       NO       
+     DEG20-1.15809          44.2049       NO       
+     DEG20-1.15810          44.2049       NO       
+     DEG20-1.15811          44.2049       NO       
+     DEG20-1.15812          44.2056       NO       
+     DEG20-1.15813          44.2164       NO       
+     DEG20-1.15814          44.2765       NO       
+     DEG20-1.15815          44.4121       NO       
+     DEG20-1.15816          44.3909       NO       
+     DEG20-1.15937          41.6035       NO       
+     DEG20-1.15938          41.4364       NO       
+     DEG20-1.15939          41.3725       NO       
+     DEG20-1.15940          41.3495       NO       
+     DEG20-1.15941          41.3418       NO       
+     DEG20-1.15942          41.3393       NO       
+     DEG20-1.15943          41.3385       NO       
+     DEG20-1.15944          41.3383       NO       
+     DEG20-1.15945          41.3382       NO       
+     DEG20-1.15946          41.3382       NO       
+     DEG20-1.15947          41.3382       NO       
+     DEG20-1.15948          41.3382       NO       
+     DEG20-1.15949          41.3382       NO       
+     DEG20-1.15950          41.3382       NO       
+     DEG20-1.15951          41.3382       NO       
+     DEG20-1.15952          41.3382       NO       
+     DEG20-1.15953          41.3382       NO       
+     DEG20-1.15954          41.3382       NO       
+     DEG20-1.15955          41.3382       NO       
+     DEG20-1.15956           41.339       NO       
+     DEG20-1.15957          41.3504       NO       
+     DEG20-1.15958          41.4136       NO       
+     DEG20-1.15959          41.5563       NO       
+     DEG20-1.15960           41.534       NO       
+     DEG20-1.15961          43.6644       NO       
+     DEG20-1.15962          43.4167       NO       
+     DEG20-1.15963          43.3133       NO       
+     DEG20-1.15964          43.2732       NO       
+     DEG20-1.15965          43.2585       NO       
+     DEG20-1.15966          43.2534       NO       
+     DEG20-1.15967          43.2517       NO       
+     DEG20-1.15968          43.2511       NO       
+     DEG20-1.15969           43.251       NO       
+     DEG20-1.15970          43.2509       NO       
+     DEG20-1.15971          43.2509       NO       
+     DEG20-1.15972          43.2509       NO       
+     DEG20-1.15973          43.2509       NO       
+     DEG20-1.15974          43.2509       NO       
+     DEG20-1.15975          43.2509       NO       
+     DEG20-1.15976          43.2509       NO       
+     DEG20-1.15977          43.2509       NO       
+     DEG20-1.15978          43.2509       NO       
+     DEG20-1.15979          43.2512       NO       
+     DEG20-1.15980          43.2566       NO       
+     DEG20-1.15981          43.3062       NO       
+     DEG20-1.15982          43.5349       NO       
+     DEG20-1.15983              44.       NO       
+     DEG20-1.15984          44.1028       NO       
+     DEG20-1.16081          38.8002       NO       
+     DEG20-1.16082          38.6258       NO       
+     DEG20-1.16083          38.5591       NO       
+     DEG20-1.16084          38.5351       NO       
+     DEG20-1.16085           38.527       NO       
+     DEG20-1.16086          38.5244       NO       
+     DEG20-1.16087          38.5235       NO       
+     DEG20-1.16088          38.5233       NO       
+     DEG20-1.16089          38.5233       NO       
+     DEG20-1.16090          38.5233       NO       
+     DEG20-1.16091          38.5233       NO       
+     DEG20-1.16092          38.5233       NO       
+     DEG20-1.16093          38.5233       NO       
+     DEG20-1.16094          38.5233       NO       
+     DEG20-1.16095          38.5233       NO       
+     DEG20-1.16096          38.5233       NO       
+     DEG20-1.16097          38.5233       NO       
+     DEG20-1.16098          38.5233       NO       
+     DEG20-1.16099          38.5233       NO       
+     DEG20-1.16100          38.5241       NO       
+     DEG20-1.16101          38.5361       NO       
+     DEG20-1.16102          38.6023       NO       
+     DEG20-1.16103          38.7513       NO       
+     DEG20-1.16104          38.7278       NO       
+     DEG20-1.16105          40.8877       NO       
+     DEG20-1.16106          40.6269       NO       
+     DEG20-1.16107          40.5185       NO       
+     DEG20-1.16108          40.4765       NO       
+     DEG20-1.16109          40.4611       NO       
+     DEG20-1.16110          40.4558       NO       
+     DEG20-1.16111          40.4541       NO       
+     DEG20-1.16112          40.4536       NO       
+     DEG20-1.16113          40.4534       NO       
+     DEG20-1.16114          40.4533       NO       
+     DEG20-1.16115          40.4533       NO       
+     DEG20-1.16116          40.4533       NO       
+     DEG20-1.16117          40.4533       NO       
+     DEG20-1.16118          40.4533       NO       
+     DEG20-1.16119          40.4533       NO       
+     DEG20-1.16120          40.4533       NO       
+     DEG20-1.16121          40.4533       NO       
+     DEG20-1.16122          40.4534       NO       
+     DEG20-1.16123          40.4537       NO       
+     DEG20-1.16124          40.4592       NO       
+     DEG20-1.16125          40.5114       NO       
+     DEG20-1.16126          40.7527       NO       
+     DEG20-1.16127          41.2438       NO       
+     DEG20-1.16128          41.3479       NO       
+     DEG20-1.16129          44.0702       NO       
+     DEG20-1.16130           43.798       NO       
+     DEG20-1.16131          43.6951       NO       
+     DEG20-1.16132          43.6488       NO       
+     DEG20-1.16133          43.6289       NO       
+     DEG20-1.16134           43.621       NO       
+     DEG20-1.16135          43.6182       NO       
+     DEG20-1.16136          43.6173       NO       
+     DEG20-1.16137           43.617       NO       
+     DEG20-1.16138          43.6168       NO       
+     DEG20-1.16139          43.6168       NO       
+     DEG20-1.16140          43.6168       NO       
+     DEG20-1.16141          43.6168       NO       
+     DEG20-1.16142          43.6168       NO       
+     DEG20-1.16143          43.6169       NO       
+     DEG20-1.16144          43.6169       NO       
+     DEG20-1.16145           43.617       NO       
+     DEG20-1.16146          43.6174       NO       
+     DEG20-1.16147          43.6203       NO       
+     DEG20-1.16148           43.647       NO       
+     DEG20-1.16149          43.8381       NO       
+     DEG20-1.16150          44.5101       NO       
+     DEG20-1.16225          36.0606       NO       
+     DEG20-1.16226          35.8803       NO       
+     DEG20-1.16227          35.8114       NO       
+     DEG20-1.16228          35.7867       NO       
+     DEG20-1.16229          35.7784       NO       
+     DEG20-1.16230          35.7757       NO       
+     DEG20-1.16231          35.7749       NO       
+     DEG20-1.16232          35.7746       NO       
+     DEG20-1.16233          35.7746       NO       
+     DEG20-1.16234          35.7746       NO       
+     DEG20-1.16235          35.7746       NO       
+     DEG20-1.16236          35.7746       NO       
+     DEG20-1.16237          35.7746       NO       
+     DEG20-1.16238          35.7746       NO       
+     DEG20-1.16239          35.7746       NO       
+     DEG20-1.16240          35.7746       NO       
+     DEG20-1.16241          35.7746       NO       
+     DEG20-1.16242          35.7746       NO       
+     DEG20-1.16243          35.7746       NO       
+     DEG20-1.16244          35.7754       NO       
+     DEG20-1.16245          35.7879       NO       
+     DEG20-1.16246          35.8563       NO       
+     DEG20-1.16247          36.0084       NO       
+     DEG20-1.16248          35.9857       NO       
+     DEG20-1.16249          38.2294       NO       
+     DEG20-1.16250          37.9465       NO       
+     DEG20-1.16251          37.8311       NO       
+     DEG20-1.16252           37.787       NO       
+     DEG20-1.16253           37.771       NO       
+     DEG20-1.16254          37.7655       NO       
+     DEG20-1.16255          37.7637       NO       
+     DEG20-1.16256          37.7631       NO       
+     DEG20-1.16257          37.7629       NO       
+     DEG20-1.16258          37.7629       NO       
+     DEG20-1.16259          37.7629       NO       
+     DEG20-1.16260          37.7629       NO       
+     DEG20-1.16261          37.7629       NO       
+     DEG20-1.16262          37.7629       NO       
+     DEG20-1.16263          37.7629       NO       
+     DEG20-1.16264          37.7629       NO       
+     DEG20-1.16265          37.7629       NO       
+     DEG20-1.16266          37.7629       NO       
+     DEG20-1.16267          37.7632       NO       
+     DEG20-1.16268          37.7691       NO       
+     DEG20-1.16269          37.8253       NO       
+     DEG20-1.16270          38.0837       NO       
+     DEG20-1.16271           38.605       NO       
+     DEG20-1.16272          38.7101       NO       
+     DEG20-1.16273           41.524       NO       
+     DEG20-1.16274          41.2337       NO       
+     DEG20-1.16275          41.1258       NO       
+     DEG20-1.16276          41.0782       NO       
+     DEG20-1.16277          41.0579       NO       
+     DEG20-1.16278            41.05       NO       
+     DEG20-1.16279          41.0471       NO       
+     DEG20-1.16280          41.0461       NO       
+     DEG20-1.16281          41.0458       NO       
+     DEG20-1.16282          41.0458       NO       
+     DEG20-1.16283          41.0458       NO       
+     DEG20-1.16284          41.0458       NO       
+     DEG20-1.16285          41.0458       NO       
+     DEG20-1.16286          41.0458       NO       
+     DEG20-1.16287          41.0459       NO       
+     DEG20-1.16288          41.0459       NO       
+     DEG20-1.16289           41.046       NO       
+     DEG20-1.16290          41.0464       NO       
+     DEG20-1.16291          41.0492       NO       
+     DEG20-1.16292          41.0775       NO       
+     DEG20-1.16293          41.2804       NO       
+     DEG20-1.16294          41.9943       NO       
+     DEG20-1.16295          43.2412       NO       
+     DEG20-1.16296          43.7786       NO       
+     DEG20-1.16369           33.366       NO       
+     DEG20-1.16370          33.1919       NO       
+     DEG20-1.16371          33.1243       NO       
+     DEG20-1.16372          33.0998       NO       
+     DEG20-1.16373          33.0915       NO       
+     DEG20-1.16374          33.0887       NO       
+     DEG20-1.16375          33.0878       NO       
+     DEG20-1.16376          33.0876       NO       
+     DEG20-1.16377          33.0875       NO       
+     DEG20-1.16378          33.0876       NO       
+     DEG20-1.16379          33.0876       NO       
+     DEG20-1.16380          33.0876       NO       
+     DEG20-1.16381          33.0876       NO       
+     DEG20-1.16382          33.0876       NO       
+     DEG20-1.16383          33.0876       NO       
+     DEG20-1.16384          33.0876       NO       
+     DEG20-1.16385          33.0876       NO       
+     DEG20-1.16386          33.0876       NO       
+     DEG20-1.16387          33.0876       NO       
+     DEG20-1.16388          33.0885       NO       
+     DEG20-1.16389          33.1006       NO       
+     DEG20-1.16390           33.164       NO       
+     DEG20-1.16391          33.3039       NO       
+     DEG20-1.16392          33.2892       NO       
+     DEG20-1.16393          35.7815       NO       
+     DEG20-1.16394          35.4737       NO       
+     DEG20-1.16395          35.3517       NO       
+     DEG20-1.16396          35.3058       NO       
+     DEG20-1.16397          35.2894       NO       
+     DEG20-1.16398          35.2838       NO       
+     DEG20-1.16399          35.2821       NO       
+     DEG20-1.16400          35.2814       NO       
+     DEG20-1.16401          35.2812       NO       
+     DEG20-1.16402          35.2812       NO       
+     DEG20-1.16403          35.2812       NO       
+     DEG20-1.16404          35.2812       NO       
+     DEG20-1.16405          35.2812       NO       
+     DEG20-1.16406          35.2812       NO       
+     DEG20-1.16407          35.2812       NO       
+     DEG20-1.16408          35.2812       NO       
+     DEG20-1.16409          35.2812       NO       
+     DEG20-1.16410          35.2812       NO       
+     DEG20-1.16411          35.2816       NO       
+     DEG20-1.16412          35.2884       NO       
+     DEG20-1.16413          35.3506       NO       
+     DEG20-1.16414          35.6215       NO       
+     DEG20-1.16415          36.1535       NO       
+     DEG20-1.16416          36.2752       NO       
+     DEG20-1.16417          39.3346       NO       
+     DEG20-1.16418          39.0165       NO       
+     DEG20-1.16419          38.9023       NO       
+     DEG20-1.16420          38.8535       NO       
+     DEG20-1.16421          38.8329       NO       
+     DEG20-1.16422           38.825       NO       
+     DEG20-1.16423          38.8221       NO       
+     DEG20-1.16424          38.8211       NO       
+     DEG20-1.16425          38.8208       NO       
+     DEG20-1.16426          38.8207       NO       
+     DEG20-1.16427          38.8206       NO       
+     DEG20-1.16428          38.8206       NO       
+     DEG20-1.16429          38.8206       NO       
+     DEG20-1.16430          38.8206       NO       
+     DEG20-1.16431          38.8206       NO       
+     DEG20-1.16432          38.8206       NO       
+     DEG20-1.16433          38.8208       NO       
+     DEG20-1.16434          38.8213       NO       
+     DEG20-1.16435          38.8244       NO       
+     DEG20-1.16436          38.8554       NO       
+     DEG20-1.16437          39.0729       NO       
+     DEG20-1.16438          39.8156       NO       
+     DEG20-1.16439          41.0847       NO       
+     DEG20-1.16440          41.6589       NO       
+     DEG20-1.16513          30.5943       NO       
+     DEG20-1.16514           30.454       NO       
+     DEG20-1.16515          30.3954       NO       
+     DEG20-1.16516          30.3729       NO       
+     DEG20-1.16517          30.3649       NO       
+     DEG20-1.16518          30.3622       NO       
+     DEG20-1.16519          30.3614       NO       
+     DEG20-1.16520          30.3611       NO       
+     DEG20-1.16521          30.3611       NO       
+     DEG20-1.16522           30.361       NO       
+     DEG20-1.16523           30.361       NO       
+     DEG20-1.16524           30.361       NO       
+     DEG20-1.16525           30.361       NO       
+     DEG20-1.16526           30.361       NO       
+     DEG20-1.16527           30.361       NO       
+     DEG20-1.16528           30.361       NO       
+     DEG20-1.16529           30.361       NO       
+     DEG20-1.16530           30.361       NO       
+     DEG20-1.16531          30.3611       NO       
+     DEG20-1.16532          30.3616       NO       
+     DEG20-1.16533          30.3681       NO       
+     DEG20-1.16534          30.4074       NO       
+     DEG20-1.16535          30.5051       NO       
+     DEG20-1.16536          30.5008       NO       
+     DEG20-1.16537          33.5053       NO       
+     DEG20-1.16538          33.2084       NO       
+     DEG20-1.16539          33.0908       NO       
+     DEG20-1.16540          33.0462       NO       
+     DEG20-1.16541          33.0299       NO       
+     DEG20-1.16542          33.0243       NO       
+     DEG20-1.16543          33.0225       NO       
+     DEG20-1.16544          33.0218       NO       
+     DEG20-1.16545          33.0216       NO       
+     DEG20-1.16546          33.0216       NO       
+     DEG20-1.16547          33.0216       NO       
+     DEG20-1.16548          33.0216       NO       
+     DEG20-1.16549          33.0216       NO       
+     DEG20-1.16550          33.0216       NO       
+     DEG20-1.16551          33.0216       NO       
+     DEG20-1.16552          33.0216       NO       
+     DEG20-1.16553          33.0216       NO       
+     DEG20-1.16554          33.0216       NO       
+     DEG20-1.16555          33.0221       NO       
+     DEG20-1.16556            33.03       NO       
+     DEG20-1.16557          33.0883       NO       
+     DEG20-1.16558          33.3282       NO       
+     DEG20-1.16559          33.7956       NO       
+     DEG20-1.16560          33.9392       NO       
+     DEG20-1.16561          37.5425       NO       
+     DEG20-1.16562          37.2082       NO       
+     DEG20-1.16563          37.0898       NO       
+     DEG20-1.16564          37.0401       NO       
+     DEG20-1.16565          37.0192       NO       
+     DEG20-1.16566          37.0111       NO       
+     DEG20-1.16567          37.0083       NO       
+     DEG20-1.16568          37.0073       NO       
+     DEG20-1.16569           37.007       NO       
+     DEG20-1.16570          37.0069       NO       
+     DEG20-1.16571          37.0069       NO       
+     DEG20-1.16572          37.0069       NO       
+     DEG20-1.16573          37.0069       NO       
+     DEG20-1.16574          37.0069       NO       
+     DEG20-1.16575          37.0069       NO       
+     DEG20-1.16576          37.0069       NO       
+     DEG20-1.16577           37.007       NO       
+     DEG20-1.16578          37.0075       NO       
+     DEG20-1.16579          37.0111       NO       
+     DEG20-1.16580          37.0446       NO       
+     DEG20-1.16581           37.257       NO       
+     DEG20-1.16582          37.9439       NO       
+     DEG20-1.16583          39.0839       NO       
+     DEG20-1.16584          39.6384       NO       
+     DEG20-1.16585          44.6094       NO       
+     DEG20-1.16586          44.8224       NO       
+     DEG20-1.16587          44.8811       NO       
+     DEG20-1.16588          44.8665       NO       
+     DEG20-1.16589          44.8476       NO       
+     DEG20-1.16590          44.8383       NO       
+     DEG20-1.16591          44.8347       NO       
+     DEG20-1.16592          44.8335       NO       
+     DEG20-1.16593           44.833       NO       
+     DEG20-1.16594          44.8329       NO       
+     DEG20-1.16595          44.8328       NO       
+     DEG20-1.16596          44.8328       NO       
+     DEG20-1.16597          44.8328       NO       
+     DEG20-1.16598          44.8328       NO       
+     DEG20-1.16599          44.8329       NO       
+     DEG20-1.16600          44.8332       NO       
+     DEG20-1.16601          44.8343       NO       
+     DEG20-1.16602          44.8387       NO       
+     DEG20-1.16603          44.8586       NO       
+     DEG20-1.16604           44.979       NO       
+     DEG20-1.16657          27.4618       NO       
+     DEG20-1.16658           27.382       NO       
+     DEG20-1.16659          27.3422       NO       
+     DEG20-1.16660          27.3253       NO       
+     DEG20-1.16661          27.3188       NO       
+     DEG20-1.16662          27.3165       NO       
+     DEG20-1.16663          27.3157       NO       
+     DEG20-1.16664          27.3155       NO       
+     DEG20-1.16665          27.3155       NO       
+     DEG20-1.16666          27.3155       NO       
+     DEG20-1.16667          27.3155       NO       
+     DEG20-1.16668          27.3155       NO       
+     DEG20-1.16669          27.3155       NO       
+     DEG20-1.16670          27.3155       NO       
+     DEG20-1.16671          27.3155       NO       
+     DEG20-1.16672          27.3155       NO       
+     DEG20-1.16673          27.3155       NO       
+     DEG20-1.16674          27.3155       NO       
+     DEG20-1.16675          27.3153       NO       
+     DEG20-1.16676           27.313       NO       
+     DEG20-1.16677          27.3057       NO       
+     DEG20-1.16678          27.3092       NO       
+     DEG20-1.16679          27.3569       NO       
+     DEG20-1.16680          27.3632       NO       
+     DEG20-1.16681          30.8467       NO       
+     DEG20-1.16682          30.6106       NO       
+     DEG20-1.16683          30.5102       NO       
+     DEG20-1.16684          30.4696       NO       
+     DEG20-1.16685           30.454       NO       
+     DEG20-1.16686          30.4483       NO       
+     DEG20-1.16687          30.4463       NO       
+     DEG20-1.16688          30.4457       NO       
+     DEG20-1.16689          30.4455       NO       
+     DEG20-1.16690          30.4455       NO       
+     DEG20-1.16691          30.4455       NO       
+     DEG20-1.16692          30.4455       NO       
+     DEG20-1.16693          30.4455       NO       
+     DEG20-1.16694          30.4455       NO       
+     DEG20-1.16695          30.4455       NO       
+     DEG20-1.16696          30.4455       NO       
+     DEG20-1.16697          30.4455       NO       
+     DEG20-1.16698          30.4455       NO       
+     DEG20-1.16699          30.4453       NO       
+     DEG20-1.16700           30.446       NO       
+     DEG20-1.16701          30.4745       NO       
+     DEG20-1.16702          30.6464       NO       
+     DEG20-1.16703           31.024       NO       
+     DEG20-1.16704          31.2092       NO       
+     DEG20-1.16705          35.3817       NO       
+     DEG20-1.16706          35.0506       NO       
+     DEG20-1.16707          34.9289       NO       
+     DEG20-1.16708          34.8764       NO       
+     DEG20-1.16709          34.8537       NO       
+     DEG20-1.16710          34.8447       NO       
+     DEG20-1.16711          34.8414       NO       
+     DEG20-1.16712          34.8402       NO       
+     DEG20-1.16713          34.8399       NO       
+     DEG20-1.16714          34.8398       NO       
+     DEG20-1.16715          34.8398       NO       
+     DEG20-1.16716          34.8398       NO       
+     DEG20-1.16717          34.8398       NO       
+     DEG20-1.16718          34.8398       NO       
+     DEG20-1.16719          34.8398       NO       
+     DEG20-1.16720          34.8398       NO       
+     DEG20-1.16721          34.8399       NO       
+     DEG20-1.16722          34.8402       NO       
+     DEG20-1.16723          34.8424       NO       
+     DEG20-1.16724          34.8638       NO       
+     DEG20-1.16725          35.0295       NO       
+     DEG20-1.16726          35.5983       NO       
+     DEG20-1.16727          36.5325       NO       
+     DEG20-1.16728           37.008       NO       
+     DEG20-1.16729          42.9499       NO       
+     DEG20-1.16730          42.9503       NO       
+     DEG20-1.16731          42.9441       NO       
+     DEG20-1.16732          42.9124       NO       
+     DEG20-1.16733          42.8885       NO       
+     DEG20-1.16734          42.8772       NO       
+     DEG20-1.16735          42.8727       NO       
+     DEG20-1.16736          42.8711       NO       
+     DEG20-1.16737          42.8707       NO       
+     DEG20-1.16738          42.8706       NO       
+     DEG20-1.16739          42.8706       NO       
+     DEG20-1.16740          42.8706       NO       
+     DEG20-1.16741          42.8706       NO       
+     DEG20-1.16742          42.8706       NO       
+     DEG20-1.16743          42.8706       NO       
+     DEG20-1.16744          42.8708       NO       
+     DEG20-1.16745          42.8717       NO       
+     DEG20-1.16746          42.8754       NO       
+     DEG20-1.16747          42.8916       NO       
+     DEG20-1.16748          42.9916       NO       
+     DEG20-1.16749          43.4074       NO       
+     DEG20-1.16750          44.3589       NO       
+     DEG20-1.24865           23.773       NO       
+     DEG20-1.24866          27.6531       NO       
+     DEG20-1.24867          32.7559       NO       
+     DEG20-1.24868          40.7084       NO       
+     DEG20-1.24871          23.8202       NO       
+     DEG20-1.24872          27.5912       NO       
+     DEG20-1.24873          32.3439       NO       
+     DEG20-1.24874          39.8896       NO       
+     DEG20-1.24877          23.8628       NO       
+     DEG20-1.24878           27.522       NO       
+     DEG20-1.24879          31.8836       NO       
+     DEG20-1.24880           38.984       NO       
+     DEG20-1.24883          23.8997       NO       
+     DEG20-1.24884          27.5374       NO       
+     DEG20-1.24885          31.7083       NO       
+     DEG20-1.24886           38.488       NO       
+     DEG20-1.24889          23.9146       NO       
+     DEG20-1.24890          27.5585       NO       
+     DEG20-1.24891          31.6933       NO       
+     DEG20-1.24892          38.3414       NO       
+     DEG20-1.24895          23.9172       NO       
+     DEG20-1.24896          27.5639       NO       
+     DEG20-1.24897          31.6964       NO       
+     DEG20-1.24898            38.32       NO       
+     DEG20-1.24901          23.9174       NO       
+     DEG20-1.24902          27.5643       NO       
+     DEG20-1.24903          31.6966       NO       
+     DEG20-1.24904          38.3161       NO       
+     DEG20-1.24907          23.9174       NO       
+     DEG20-1.24908          27.5643       NO       
+     DEG20-1.24909          31.6965       NO       
+     DEG20-1.24910           38.315       NO       
+     DEG20-1.24913          23.9174       NO       
+     DEG20-1.24914          27.5643       NO       
+     DEG20-1.24915          31.6965       NO       
+     DEG20-1.24916          38.3148       NO       
+     DEG20-1.24919          23.9174       NO       
+     DEG20-1.24920          27.5643       NO       
+     DEG20-1.24921          31.6965       NO       
+     DEG20-1.24922          38.3148       NO       
+     DEG20-1.24925          23.9174       NO       
+     DEG20-1.24926          27.5643       NO       
+     DEG20-1.24927          31.6965       NO       
+     DEG20-1.24928          38.3148       NO       
+     DEG20-1.24931          23.9174       NO       
+     DEG20-1.24932          27.5643       NO       
+     DEG20-1.24933          31.6965       NO       
+     DEG20-1.24934          38.3148       NO       
+     DEG20-1.24937          23.9174       NO       
+     DEG20-1.24938          27.5643       NO       
+     DEG20-1.24939          31.6965       NO       
+     DEG20-1.24940          38.3148       NO       
+     DEG20-1.24943          23.9174       NO       
+     DEG20-1.24944          27.5643       NO       
+     DEG20-1.24945          31.6965       NO       
+     DEG20-1.24946          38.3148       NO       
+     DEG20-1.24949          23.9174       NO       
+     DEG20-1.24950          27.5643       NO       
+     DEG20-1.24951          31.6965       NO       
+     DEG20-1.24952          38.3148       NO       
+     DEG20-1.24955          23.9174       NO       
+     DEG20-1.24956          27.5643       NO       
+     DEG20-1.24957          31.6966       NO       
+     DEG20-1.24958          38.3149       NO       
+     DEG20-1.24961          23.9174       NO       
+     DEG20-1.24962          27.5643       NO       
+     DEG20-1.24963          31.6967       NO       
+     DEG20-1.24964          38.3151       NO       
+     DEG20-1.24967          23.9174       NO       
+     DEG20-1.24968          27.5646       NO       
+     DEG20-1.24969          31.6972       NO       
+     DEG20-1.24970          38.3158       NO       
+     DEG20-1.24973          23.9176       NO       
+     DEG20-1.24974          27.5654       NO       
+     DEG20-1.24975          31.6988       NO       
+     DEG20-1.24976          38.3183       NO       
+     DEG20-1.24979          23.9184       NO       
+     DEG20-1.24980          27.5678       NO       
+     DEG20-1.24981          31.7036       NO       
+     DEG20-1.24982          38.3256       NO       
+     DEG20-1.24985          23.9205       NO       
+     DEG20-1.24986          27.5745       NO       
+     DEG20-1.24987          31.7164       NO       
+     DEG20-1.24988          38.3441       NO       
+     DEG20-1.24991          23.9256       NO       
+     DEG20-1.24992          27.5917       NO       
+     DEG20-1.24993          31.7474       NO       
+     DEG20-1.24994          38.3799       NO       
+     DEG20-1.24997          23.9356       NO       
+     DEG20-1.24998          27.6303       NO       
+     DEG20-1.24999          31.8128       NO       
+     DEG20-1.25000          38.4217       NO       
+     DEG20-1.25003          23.9479       NO       
+     DEG20-1.25004          27.7017       NO       
+     DEG20-1.25005          31.9423       NO       
+     DEG20-1.25006          38.4389       NO       
+     DEG20-1.25513          23.9303       NO       
+     DEG20-1.25514          23.9088       NO       
+     DEG20-1.25515          23.9121       NO       
+     DEG20-1.25516          23.9153       NO       
+     DEG20-1.25517          23.9182       NO       
+     DEG20-1.25518          23.9196       NO       
+     DEG20-1.25519          23.9198       NO       
+     DEG20-1.25520          23.9198       NO       
+     DEG20-1.25521          23.9199       NO       
+     DEG20-1.25522          23.9199       NO       
+     DEG20-1.25523          23.9199       NO       
+     DEG20-1.25524          23.9199       NO       
+     DEG20-1.25525          23.9199       NO       
+     DEG20-1.25526            23.92       NO       
+     DEG20-1.25527          23.9204       NO       
+     DEG20-1.25528          23.9213       NO       
+     DEG20-1.25529          23.9239       NO       
+     DEG20-1.25530          23.9303       NO       
+     DEG20-1.25531          23.9448       NO       
+     DEG20-1.25532          23.9752       NO       
+     DEG20-1.25533          24.0322       NO       
+     DEG20-1.25534           24.126       NO       
+     DEG20-1.25535          24.2557       NO       
+     DEG20-1.25536          24.4018       NO       
+     DEG20-1.25537          27.7821       NO       
+     DEG20-1.25538           27.833       NO       
+     DEG20-1.25539          27.8549       NO       
+     DEG20-1.25540          27.8664       NO       
+     DEG20-1.25541          27.8735       NO       
+     DEG20-1.25542           27.876       NO       
+     DEG20-1.25543          27.8763       NO       
+     DEG20-1.25544          27.8764       NO       
+     DEG20-1.25545          27.8765       NO       
+     DEG20-1.25546          27.8765       NO       
+     DEG20-1.25547          27.8765       NO       
+     DEG20-1.25548          27.8765       NO       
+     DEG20-1.25549          27.8765       NO       
+     DEG20-1.25550          27.8766       NO       
+     DEG20-1.25551           27.877       NO       
+     DEG20-1.25552          27.8784       NO       
+     DEG20-1.25553          27.8822       NO       
+     DEG20-1.25554          27.8922       NO       
+     DEG20-1.25555          27.9164       NO       
+     DEG20-1.25556          27.9699       NO       
+     DEG20-1.25557          28.0758       NO       
+     DEG20-1.25558          28.2573       NO       
+     DEG20-1.25559          28.5144       NO       
+     DEG20-1.25560          28.7931       NO       
+     DEG20-1.25561          32.2567       NO       
+     DEG20-1.25562          32.5154       NO       
+     DEG20-1.25563          32.5578       NO       
+     DEG20-1.25564          32.5766       NO       
+     DEG20-1.25565          32.5862       NO       
+     DEG20-1.25566          32.5892       NO       
+     DEG20-1.25567          32.5898       NO       
+     DEG20-1.25568          32.5899       NO       
+     DEG20-1.25569          32.5899       NO       
+     DEG20-1.25570          32.5899       NO       
+     DEG20-1.25571          32.5899       NO       
+     DEG20-1.25572          32.5899       NO       
+     DEG20-1.25573            32.59       NO       
+     DEG20-1.25574          32.5901       NO       
+     DEG20-1.25575          32.5906       NO       
+     DEG20-1.25576           32.592       NO       
+     DEG20-1.25577          32.5963       NO       
+     DEG20-1.25578          32.6085       NO       
+     DEG20-1.25579          32.6404       NO       
+     DEG20-1.25580          32.7167       NO       
+     DEG20-1.25581          32.8796       NO       
+     DEG20-1.25582          33.1776       NO       
+     DEG20-1.25583          33.6244       NO       
+     DEG20-1.25584          34.1457       NO       
+     DEG20-1.25585          38.8694       NO       
+     DEG20-1.25586          39.3085       NO       
+     DEG20-1.25587          39.3281       NO       
+     DEG20-1.25588          39.3436       NO       
+     DEG20-1.25589           39.353       NO       
+     DEG20-1.25590          39.3562       NO       
+     DEG20-1.25591           39.357       NO       
+     DEG20-1.25592          39.3571       NO       
+     DEG20-1.25593          39.3572       NO       
+     DEG20-1.25594          39.3572       NO       
+     DEG20-1.25595          39.3572       NO       
+     DEG20-1.25596          39.3572       NO       
+     DEG20-1.25597          39.3572       NO       
+     DEG20-1.25598          39.3573       NO       
+     DEG20-1.25599          39.3576       NO       
+     DEG20-1.25600          39.3587       NO       
+     DEG20-1.25601          39.3624       NO       
+     DEG20-1.25602          39.3739       NO       
+     DEG20-1.25603          39.4077       NO       
+     DEG20-1.25604          39.4992       NO       
+     DEG20-1.25605          39.7178       NO       
+     DEG20-1.25606          40.1541       NO       
+     DEG20-1.25607          40.8463       NO       
+     DEG20-1.25608           41.697       NO       
+  
+  
+  *Step, name=Step-1, nlgeom=NO
+  *output, field
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *Step, name=Step-1, nlgeom=NO
+  *Step, name=Step-1, nlgeom=NO
+  *static
+  *boundary
+  *boundary
+  *dsload
+  *output, field
+  *nodeoutput
+  *elementoutput, directions=YES
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *endstep
+  *Step, name=Step-1, nlgeom=NO
+  *static
+  *boundary
+  *boundary
+  *endstep
+
+     - (RAMP) OR (STEP) - INDICATE USE OF DEFAULT AMPLITUDES ASSOCIATED WITH THE STEP
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                 26160
+          NUMBER OF NODES IS                                    29743
+          NUMBER OF NODES DEFINED BY THE USER                   29743
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                89229
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   5.0000    
+       SYSTEM TIME (SEC)    =   1.1000    
+       TOTAL CPU TIME (SEC) =   6.1000    
+       WALLCLOCK TIME (SEC) =          6
+1
+
+   Abaqus 3DEXPERIENCE R2018x                                  Date 20-Nov-2024   Time 18:41:59
+   For use by INDIAN INSTITUTE OF TECHNOLOGY under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    1  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     S T A T I C   A N A L Y S I S
+
+
+                                                                                          
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                0.100    
+          AND A TOTAL TIME PERIOD OF                            1.00    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-05
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
+
+     LINEAR EQUATION SOLVER TYPE         DIRECT SPARSE
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1          8.70E+10              104                707
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+                              WITH      1 WARNING MESSAGES ON THE DAT FILE
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   61.900    
+       SYSTEM TIME (SEC)    =   1.1000    
+       TOTAL CPU TIME (SEC) =   63.000    
+       WALLCLOCK TIME (SEC) =         64

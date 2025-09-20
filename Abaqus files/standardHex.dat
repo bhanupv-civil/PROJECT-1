@@ -1,0 +1,184 @@
+1
+
+   Abaqus 3DEXPERIENCE R2018x                                  Date 23-Nov-2024   Time 15:44:10
+   For use by INDIAN INSTITUTE OF TECHNOLOGY under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine DESKTOP-M4VAJAV 
+                          you are authorized to run
+                          Abaqus/Standard until 09-Apr-2025
+
+                          Your site id is: 200000000145531 
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      http://www.3ds.com/products/simulia/locations/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *               Abaqus 3DEXPERIENCE R2018x                * 
+                *                                                         * 
+                *          BUILD ID: 2017_11_07-22.51.41 127140           * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release 3DEXPERIENCE R2018x manuals                    * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a commercial fee.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+ ***ERROR: in keyword *BOUNDARY, file "standardHex.inp", line 16019: Unknown 
+           assembly node set SET-1
+ ***NOTE: DUE TO AN INPUT ERROR THE ANALYSIS PRE-PROCESSOR HAS BEEN UNABLE TO 
+          INTERPRET SOME DATA.  SUBSEQUENT ERRORS MAY BE CAUSED BY THIS OMISSION
+
+ ***ERROR: in keyword *BOUNDARY, file "standardHex.inp", line 16022: Unknown 
+           assembly node set SET-2
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+  *Node
+  *Element, type=C3D8R
+  *Nset, nset=ASSEMBLY_STANDARD_HEXAGON-1_SET-1
+  *Elset, elset=ASSEMBLY_STANDARD_HEXAGON-1_SET-1
+  *material, name=MATERIAL-1
+  *elastic
+  *solidsection, elset=ASSEMBLY_STANDARD_HEXAGON-1_SET-1, material=MATERIAL-1
+  *solidsection, elset=ASSEMBLY_STANDARD_HEXAGON-1_SET-1, material=MATERIAL-1
+
+ ***ERROR: SURFACE DEFINITION ASSEMBLY_SURF-1 NOT FOUND.
+  *boundary
+  *boundary
+  *boundary
+  *boundary
+  *output, field
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+  *output, field
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+  *output, field
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+  *Step, name=Step-1, nlgeom=NO
+  *output, field
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *Step, name=Step-1, nlgeom=NO
+
+ ***ERROR: NODE SET ASSEMBLY_SET-1 HAS NOT BEEN DEFINED
+
+ ***ERROR: NODE SET ASSEMBLY_SET-2 HAS NOT BEEN DEFINED
+  *Step, name=Step-1, nlgeom=NO
+  *static
+  *boundary
+  *boundary
+  *dsload
+
+ ***ERROR: THE SURFACE ASSEMBLY_SURF-1 HAS NOT BEEN LOCATED
+ LINE IMAGE: ASSEMBLY_SURF-1, P, 0.8
+  *output, field
+  *nodeoutput
+  *elementoutput, directions=YES
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *endstep
+  *Step, name=Step-1, nlgeom=NO
+  *static
+  *boundary
+
+ ***ERROR: A BOUNDARY CONDITION HAS BEEN SPECIFIED ON NODE SET ASSEMBLY_SET-1 
+           BUT THIS NODE SET IS NOT ACTIVE IN THE MODEL
+  *boundary
+
+ ***ERROR: A BOUNDARY CONDITION HAS BEEN SPECIFIED ON NODE SET ASSEMBLY_SET-2 
+           BUT THIS NODE SET IS NOT ACTIVE IN THE MODEL
+  *endstep
+
+ ***ERROR: NODE SET ASSEMBLY_SET-1 HAS NOT BEEN DEFINED
+
+ ***ERROR: NODE SET ASSEMBLY_SET-2 HAS NOT BEEN DEFINED
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                  7293
+          NUMBER OF NODES IS                                     8680
+          NUMBER OF NODES DEFINED BY THE USER                    8680
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                26040
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+
+
+          THE PROGRAM HAS DISCOVERED    10 FATAL ERRORS
+
+               ** EXECUTION IS TERMINATED **
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   1.6000    
+       SYSTEM TIME (SEC)    =  0.50000    
+       TOTAL CPU TIME (SEC) =   2.1000    
+       WALLCLOCK TIME (SEC) =          4

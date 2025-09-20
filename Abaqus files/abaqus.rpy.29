@@ -1,0 +1,349 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2018 replay file
+# Internal Version: 2017_11_07-22.51.41 127140
+# Run by Admin on Mon Nov 25 02:36:58 2024
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=200.708633422852, 
+    height=126.907554626465)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+#--- Recover file: 'abaqus1.rec' ---
+# -*- coding: mbcs -*- 
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.openAcis(
+    'C:/Users/Admin/Desktop/autocad term project/square_side 50mm/250(std_square).sat', 
+    scaleFromFile=OFF)
+mdb.models['Model-1'].PartFromGeometryFile(combine=False, 
+    dimensionality=THREE_D, geometryFile=mdb.acis, name='P250(std_square)', 
+    type=DEFORMABLE_BODY)
+mdb.openAcis(
+    'C:/Users/Admin/Desktop/autocad term project/square_side 50mm/180.sat', 
+    scaleFromFile=OFF)
+mdb.models['Model-1'].PartFromGeometryFile(combine=False, 
+    dimensionality=THREE_D, geometryFile=mdb.acis, name='P180', 
+    type=DEFORMABLE_BODY)
+del mdb.models['Model-1'].parts['P180']
+mdb.openAcis(
+    'C:/Users/Admin/Desktop/autocad term project/square_side 50mm/120.sat', 
+    scaleFromFile=OFF)
+mdb.models['Model-1'].PartFromGeometryFile(combine=False, 
+    dimensionality=THREE_D, geometryFile=mdb.acis, name='P120', 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=OFF, name='P120-1', 
+    part=mdb.models['Model-1'].parts['P120'])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=OFF, 
+    name='P250(std_square)-1', 
+    part=mdb.models['Model-1'].parts['P250(std_square)'])
+del mdb.models['Model-1'].rootAssembly.features['P120-1']
+#--- End of Recover file ------
+p1 = mdb.models['Model-1'].parts['P120']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+del mdb.models['Model-1'].parts['P120']
+p = mdb.models['Model-1'].parts['P250(std_square)']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+del mdb.models['Model-1'].parts['P250(std_square)']
+acis = mdb.openAcis('C:/Users/Admin/Desktop/Drawing28.sat', scaleFromFile=OFF)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-1', 
+    geometryFile=acis, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-2', 
+    geometryFile=acis, bodyNum=2, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-3', 
+    geometryFile=acis, bodyNum=3, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-4', 
+    geometryFile=acis, bodyNum=4, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-5', 
+    geometryFile=acis, bodyNum=5, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-6', 
+    geometryFile=acis, bodyNum=6, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-7', 
+    geometryFile=acis, bodyNum=7, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-8', 
+    geometryFile=acis, bodyNum=8, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-9', 
+    geometryFile=acis, bodyNum=9, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-10', 
+    geometryFile=acis, bodyNum=10, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-11', 
+    geometryFile=acis, bodyNum=11, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-12', 
+    geometryFile=acis, bodyNum=12, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-13', 
+    geometryFile=acis, bodyNum=13, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-14', 
+    geometryFile=acis, bodyNum=14, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-15', 
+    geometryFile=acis, bodyNum=15, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-16', 
+    geometryFile=acis, bodyNum=16, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-17', 
+    geometryFile=acis, bodyNum=17, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-18', 
+    geometryFile=acis, bodyNum=18, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-19', 
+    geometryFile=acis, bodyNum=19, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-20', 
+    geometryFile=acis, bodyNum=20, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-21', 
+    geometryFile=acis, bodyNum=21, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-22', 
+    geometryFile=acis, bodyNum=22, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-23', 
+    geometryFile=acis, bodyNum=23, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+mdb.models['Model-1'].PartFromGeometryFile(name='Drawing28-24', 
+    geometryFile=acis, bodyNum=24, combine=False, dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+p = mdb.models['Model-1'].parts['Drawing28-24']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Model-1'].rootAssembly
+a.suppressFeatures(featureNames=('P250(std_square)-1', ))
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+a = mdb.models['Model-1'].rootAssembly
+p = mdb.models['Model-1'].parts['Drawing28-1']
+a.Instance(name='Drawing28-1-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-2']
+a.Instance(name='Drawing28-2-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-3']
+a.Instance(name='Drawing28-3-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-4']
+a.Instance(name='Drawing28-4-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-5']
+a.Instance(name='Drawing28-5-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-6']
+a.Instance(name='Drawing28-6-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-7']
+a.Instance(name='Drawing28-7-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-8']
+a.Instance(name='Drawing28-8-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-9']
+a.Instance(name='Drawing28-9-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-10']
+a.Instance(name='Drawing28-10-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-11']
+a.Instance(name='Drawing28-11-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-12']
+a.Instance(name='Drawing28-12-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-13']
+a.Instance(name='Drawing28-13-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-14']
+a.Instance(name='Drawing28-14-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-15']
+a.Instance(name='Drawing28-15-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-16']
+a.Instance(name='Drawing28-16-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-17']
+a.Instance(name='Drawing28-17-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-18']
+a.Instance(name='Drawing28-18-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-19']
+a.Instance(name='Drawing28-19-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-20']
+a.Instance(name='Drawing28-20-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-21']
+a.Instance(name='Drawing28-21-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-22']
+a.Instance(name='Drawing28-22-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-23']
+a.Instance(name='Drawing28-23-1', part=p, dependent=OFF)
+p = mdb.models['Model-1'].parts['Drawing28-24']
+a.Instance(name='Drawing28-24-1', part=p, dependent=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=5957.46, 
+    farPlane=8434.03, width=5808.74, height=2482.71, cameraPosition=(1856.27, 
+    2793.15, 7102.85), cameraUpVector=(-0.542293, 0.680164, -0.49325))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4943.14, 
+    farPlane=9358.25, width=4819.74, height=2060, cameraPosition=(-2804.83, 
+    -2482.53, 4791.32), cameraUpVector=(-0.0897693, 0.986736, 0.135257), 
+    cameraTarget=(1508.21, 1001.41, 114.09))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=5508.66, 
+    farPlane=8792.73, width=1876.03, height=801.833, viewOffsetX=-704.487, 
+    viewOffsetY=613.733)
+a = mdb.models['Model-1'].rootAssembly
+a.translate(instanceList=('Drawing28-9-1', 'Drawing28-13-1', 'Drawing28-14-1'), 
+    vector=(0.0, -500.001824, 0.0))
+#: The instances were translated by 0., -500.001824, 0. with respect to the assembly coordinate system
+session.viewports['Viewport: 1'].view.setValues(nearPlane=5256.61, 
+    farPlane=9044.78, width=3776.93, height=1614.29, viewOffsetX=-777.585, 
+    viewOffsetY=502.233)
+a = mdb.models['Model-1'].rootAssembly
+a.translate(instanceList=('Drawing28-5-1', 'Drawing28-6-1'), vector=(0.0, 
+    -500.000912, 0.0))
+#: The instances were translated by 0., -500.000912, 0. with respect to the assembly coordinate system
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4365.05, 
+    farPlane=7906.61, width=3136.33, height=1340.5, cameraPosition=(4650.56, 
+    -2076.73, 4390.54), cameraUpVector=(-0.562385, 0.714229, 0.416654), 
+    cameraTarget=(1543.31, 1901.01, -818.987), viewOffsetX=-645.701, 
+    viewOffsetY=417.051)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4297.53, 
+    farPlane=7974.12, width=4475.96, height=1913.06, viewOffsetX=-961.613, 
+    viewOffsetY=583.342)
+a = mdb.models['Model-1'].rootAssembly
+a.translate(instanceList=('Drawing28-2-1', 'Drawing28-3-1', 'Drawing28-5-1', 
+    'Drawing28-6-1', 'Drawing28-7-1', 'Drawing28-8-1'), vector=(-750.0, 
+    -0.000912, 0.0))
+#: The instances were translated by -750., -912.E-06, 0. with respect to the assembly coordinate system
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4334.49, 
+    farPlane=7926.78, width=4514.46, height=1929.52, cameraPosition=(4781.24, 
+    -1399.57, 4704.33), cameraUpVector=(-0.590806, 0.737215, 0.327814), 
+    cameraTarget=(1497.61, 1758.63, -940.147), viewOffsetX=-969.884, 
+    viewOffsetY=588.36)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4335.44, 
+    farPlane=8028.63, width=4515.44, height=1929.94, cameraPosition=(4346.26, 
+    -2423.96, 4415.82), cameraUpVector=(-0.539821, 0.72754, 0.423414), 
+    cameraTarget=(1644.11, 1898.07, -745.091), viewOffsetX=-970.096, 
+    viewOffsetY=588.488)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4335.3, 
+    farPlane=8028.77, width=4515.29, height=1929.88, cameraPosition=(4078.78, 
+    -3139.5, 3956.64), cameraUpVector=(-0.0690231, 0.934208, 0.349989), 
+    cameraTarget=(1376.63, 1182.53, -1204.27), viewOffsetX=-970.064, 
+    viewOffsetY=588.468)
+a = mdb.models['Model-1'].rootAssembly
+a.translate(instanceList=('Drawing28-4-1', ), vector=(0.0, -500.000912, 0.0))
+#: The instance Drawing28-4-1 was translated by 0., -500.000912, 0. with respect to the assembly coordinate system
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4582.7, 
+    farPlane=7483.45, width=2909.46, height=1243.53, viewOffsetX=-1257.34, 
+    viewOffsetY=392.718)
+a = mdb.models['Model-1'].rootAssembly
+a.translate(instanceList=('Drawing28-21-1', 'Drawing28-22-1', 
+    'Drawing28-24-1'), vector=(0.0, 500.001824, 0.0))
+#: The instances were translated by 0., 500.001824, 0. with respect to the assembly coordinate system
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4456.87, 
+    farPlane=7609.28, width=3855.51, height=1647.88, viewOffsetX=-1543.47, 
+    viewOffsetY=453.34)
+a = mdb.models['Model-1'].rootAssembly
+a.translate(instanceList=('Drawing28-1-1', 'Drawing28-23-1'), vector=(-750.0, 
+    500.0, 0.0))
+#: The instances were translated by -750., 500., 0. with respect to the assembly coordinate system
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4431.2, 
+    farPlane=7634.95, width=3833.29, height=1638.38, viewOffsetX=167.531, 
+    viewOffsetY=341.031)
+a = mdb.models['Model-1'].rootAssembly
+a.translate(instanceList=('Drawing28-4-1', 'Drawing28-15-1', 'Drawing28-16-1'), 
+    vector=(-1500.0, -0.000912, 0.0))
+#: The instances were translated by -1.5E+03, -912.E-06, 0. with respect to the assembly coordinate system
+session.viewports['Viewport: 1'].view.setValues(nearPlane=5125.47, 
+    farPlane=7499.46, width=2702.76, height=1155.18, viewOffsetX=-646.905, 
+    viewOffsetY=313.526)
+a = mdb.models['Model-1'].rootAssembly
+a.translate(instanceList=('Drawing28-17-1', ), vector=(-1500.0, 500.0, 0.0))
+#: The instance Drawing28-17-1 was translated by -1.5E+03, 500., 0. with respect to the assembly coordinate system
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4770.77, 
+    farPlane=7282.27, width=2515.72, height=1075.24, cameraPosition=(-883.902, 
+    -4013.86, 3725.43), cameraUpVector=(-0.0990677, 0.895697, 0.433489), 
+    cameraTarget=(2202.8, 1049.05, -452.571), viewOffsetX=-602.137, 
+    viewOffsetY=291.829)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4874.44, 
+    farPlane=7384.46, width=2570.39, height=1098.61, cameraPosition=(20.2144, 
+    -5460.54, -42.7467), cameraUpVector=(-0.444631, 0.435511, 0.782709), 
+    cameraTarget=(2069.47, 1486.89, 344.888), viewOffsetX=-615.222, 
+    viewOffsetY=298.171)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4866.8, 
+    farPlane=7392.11, width=2566.36, height=1096.89, cameraPosition=(34.5341, 
+    -5456.34, -193.699), cameraUpVector=(-0.308577, 0.390661, 0.867274), 
+    cameraTarget=(2083.79, 1491.09, 193.935), viewOffsetX=-614.257, 
+    viewOffsetY=297.703)
+openMdb(
+    pathName='C:/Users/Admin/Desktop/bhanu term project/Hexagon 50mm fix(155mmside).cae')
+#: The model database "C:\Users\Admin\Desktop\bhanu term project\Hexagon 50mm fix(155mmside).cae" has been opened.
+a = mdb.models['10'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['10'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].enableMultipleColors()
+session.viewports['Viewport: 1'].setColor(initialColor='#BDBDBD')
+cmap=session.viewports['Viewport: 1'].colorMappings['Material']
+session.viewports['Viewport: 1'].setColor(colorMapping=cmap)
+session.viewports['Viewport: 1'].disableMultipleColors()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=622.28, 
+    farPlane=1116.89, width=707.798, height=302.519, cameraPosition=(424.02, 
+    465.68, 808.692), cameraUpVector=(-0.566441, 0.688375, -0.453083), 
+    cameraTarget=(140.361, 152.512, 46.1437))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=651.919, 
+    farPlane=1086.57, width=741.51, height=316.928, cameraPosition=(238.897, 
+    -166.437, 850.802), cameraUpVector=(-0.340088, 0.938825, 0.0542961), 
+    cameraTarget=(140.83, 154.114, 46.0369))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=597.227, 
+    farPlane=1139.95, width=679.302, height=290.34, cameraPosition=(18.2838, 
+    -499.004, 609.774), cameraUpVector=(-0.281669, 0.861311, 0.422854), 
+    cameraTarget=(141.476, 155.088, 46.7426))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=585.752, 
+    farPlane=1151.57, width=666.25, height=284.761, cameraPosition=(-51.8447, 
+    -623.086, 388.552), cameraUpVector=(-0.304249, 0.721334, 0.622181), 
+    cameraTarget=(141.734, 155.545, 47.5579))
+session.viewports['Viewport: 1'].enableMultipleColors()
+session.viewports['Viewport: 1'].setColor(initialColor='#BDBDBD')
+cmap = session.viewports['Viewport: 1'].colorMappings['Material']
+session.viewports['Viewport: 1'].setColor(colorMapping=cmap)
+session.viewports['Viewport: 1'].disableMultipleColors()
+a = mdb.models['140'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['120'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=650.376, 
+    farPlane=1092.53, width=739.722, height=316.164, cameraPosition=(549.55, 
+    96.921, 813.955), cameraUpVector=(-0.292443, 0.943736, -0.154402))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=606.736, 
+    farPlane=1132.32, width=690.087, height=294.949, cameraPosition=(13.7631, 
+    -427.115, 684.639), cameraUpVector=(-0.0826077, 0.925734, 0.369042), 
+    cameraTarget=(140.765, 152.611, 46.1798))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=578.844, 
+    farPlane=1162.25, width=658.363, height=281.39, cameraPosition=(-115.147, 
+    -641.726, 296.879), cameraUpVector=(-0.101966, 0.638174, 0.76311), 
+    cameraTarget=(141.085, 153.144, 47.1435))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=570.888, 
+    farPlane=1166.94, width=649.314, height=277.522, cameraPosition=(-266.913, 
+    -549.41, 362.974), cameraUpVector=(-0.00470595, 0.725775, 0.687916), 
+    cameraTarget=(141.284, 153.023, 47.0568))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=578.85, 
+    farPlane=1160.71, width=658.37, height=281.393, cameraPosition=(-175.422, 
+    -598.931, 353.762), cameraUpVector=(-0.0493241, 0.69827, 0.714133), 
+    cameraTarget=(140.992, 153.181, 47.0862))

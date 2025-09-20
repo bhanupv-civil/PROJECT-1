@@ -1,0 +1,424 @@
+1
+
+   Abaqus 3DEXPERIENCE R2018x                                  Date 23-Nov-2024   Time 21:22:53
+   For use by INDIAN INSTITUTE OF TECHNOLOGY under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine DESKTOP-M4VAJAV 
+                          you are authorized to run
+                          Abaqus/Standard until 09-Apr-2025
+
+                          Your site id is: 200000000145531 
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      http://www.3ds.com/products/simulia/locations/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *               Abaqus 3DEXPERIENCE R2018x                * 
+                *                                                         * 
+                *          BUILD ID: 2017_11_07-22.51.41 127140           * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release 3DEXPERIENCE R2018x manuals                    * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a commercial fee.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+  *Node
+  *Element, type=C3D8R
+  *Nset, nset=ASSEMBLY_P180-1_SET-1
+  *Elset, elset=ASSEMBLY_P180-1_SET-1
+  *Nset, nset=ASSEMBLY_SET-1
+  *Nset, nset=ASSEMBLY_SET-2
+  *Elset, elset=ASSEMBLY_SET-1
+  *Elset, elset=ASSEMBLY_SET-2
+  *Elset, elset=ASSEMBLY__SURF-1_S3
+  *Elset, elset=ASSEMBLY__SURF-1_S4
+  *Elset, elset=ASSEMBLY__SURF-2_S3
+  *Elset, elset=ASSEMBLY__SURF-2_S4
+  *material, name=MATERIAL-1
+  *elastic
+  *solidsection, elset=ASSEMBLY_P180-1_SET-1, material=MATERIAL-1
+  *solidsection, elset=ASSEMBLY_P180-1_SET-1, material=MATERIAL-1
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF-1
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF-2
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF-1
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF-2
+  *boundary
+  *boundary
+  *boundary
+  *boundary
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF-1
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF-2
+  *output, field
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+  *output, field
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+  *output, field
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+  
+                               E L E M E N T   Q U A L I T Y  C H E C K S        
+  
+  
+ ***NOTES: DISTORTED ISOPARAMETRIC ELEMENTS: ANGLE BETWEEN ISOPARAMETRIC LINES 
+           IS LESS THAN 45 DEGREES OR GREATER THAN 135 DEGREES.
+  
+           TETRAHEDRAL QUALITY MEASURE: VOLUME OF TETRAHEDRON DIVIDED BY THE 
+           VOLUME OF EQUILATERAL TETRAHEDRON WITH SAME CIRCUMSPHERE RADIUS; 
+           0 FOR DEGENERATE TETRAHEDRON AND 1 FOR EQUILATERIAL TETRAHEDRON. IT 
+           IS RECOMMENDED THAT THE TETRAHEDRAL QUALITY MEASURE BE GREATER THAN 
+           0.02, THE MIN INTERIOR (DIHEDRAL) ANGLE BE GREATER THAN 10 DEGREES, 
+           AND THE MAX INTERIOR (DIHEDRAL) ANGLE BE LESS THAN 160 DEGREES. 
+  
+           MODIFIED TETRAHEDRAL QUALITY MEASURE: ANGLES BETWEEN THE TWO LINE 
+           SEGMENTS ON EACH EDGE; THE EDGES OF MODIFIED TETRAHEDRAL SHOULD BE 
+           AS STRAIGHT AS POSSIBLE. IT IS RECOMMENDED THAT THE ANGLE BETWEEN 
+           THE TWO LINE SEGMENTS ON EACH EDGE IS BETWEEN 160 AND 180 DEGREES. 
+  
+           TRIANGULAR QUALITY MEASURE: AREA OF TRIANGLE DIVIDED BY THE AREA OF 
+           EQUILATERAL TRIANGLE WITH SAME CIRCUMCIRCLE RADIUS; 0 FOR DEGENERATE 
+           TRIANGLE AND 1 FOR EQUILATERAL TRIANGLE. IT IS RECOMMENDED THAT THE
+           TRIANGULAR QUALITY MEASURE BE GREATER THAN 0.01, THE MIN INTERIOR 
+           ANGLE BE GREATER THAN 10 DEGREES, AND THE MAX INTERIOR ANGLE BE LESS 
+           THAN 160 DEGREES. 
+  
+           NODAL ADJUSTMENTS ARISING FROM CONTACT INTERACTIONS AND/OR TIE 
+           CONSTRAINTS CAN CAUSE SEVERE ELEMENT DISTORTION. IT MAY BE NECESSARY 
+           TO REMESH IN ORDER TO REDUCE THE AMOUNT OF ADJUSTMENT. 
+
+ ***WARNING: 141 elements are distorted. Either the isoparametric angles are 
+             out of the suggested limits or the triangular or tetrahedral 
+             quality measure is bad. The elements have been identified in 
+             element set WarnElemDistorted.
+  
+ --------------------------------------------------------------------------------
+ Distorted isoparametric elements
+  
+     Element       Min/max angle   Adjusted nodes 
+ ---------------- ---------------- -------------- 
+      P180-1.6580          44.1116       NO       
+      P180-1.6586          44.3418       NO       
+      P180-1.6592          44.4909       NO       
+      P180-1.6598          44.5789       NO       
+      P180-1.6604          44.6259       NO       
+      P180-1.6610          44.6487       NO       
+      P180-1.6616          44.6588       NO       
+      P180-1.6622          44.6629       NO       
+      P180-1.6628          44.6646       NO       
+      P180-1.6634          44.6653       NO       
+      P180-1.6640          44.6663       NO       
+      P180-1.6646          44.6683       NO       
+      P180-1.6652          44.6707       NO       
+      P180-1.6658          44.6643       NO       
+      P180-1.6664          44.5499       NO       
+      P180-1.6669           43.646       NO       
+      P180-1.6670          41.9364       NO       
+      P180-1.6675          44.7573       NO       
+      P180-1.6676          42.0214       NO       
+      P180-1.6682          42.0182       NO       
+      P180-1.6688          42.0269       NO       
+      P180-1.6694          42.0389       NO       
+      P180-1.6700          42.0474       NO       
+      P180-1.6706          42.0519       NO       
+      P180-1.6712           42.054       NO       
+      P180-1.6718          42.0549       NO       
+      P180-1.6724          42.0551       NO       
+      P180-1.6730          42.0544       NO       
+      P180-1.6736          42.0532       NO       
+      P180-1.6742          42.0513       NO       
+      P180-1.6748          42.0418       NO       
+      P180-1.6753          44.9819       NO       
+      P180-1.6754          41.9721       NO       
+      P180-1.8675          44.3632       NO       
+      P180-1.8676          44.2506       NO       
+      P180-1.8677          44.2058       NO       
+      P180-1.8678           44.189       NO       
+      P180-1.8679          44.1831       NO       
+      P180-1.8680          44.1812       NO       
+      P180-1.8681          44.1806       NO       
+      P180-1.8682          44.1804       NO       
+      P180-1.8683          44.1804       NO       
+      P180-1.8684          44.1804       NO       
+      P180-1.8685          44.1804       NO       
+      P180-1.8686          44.1802       NO       
+      P180-1.8687          44.1783       NO       
+      P180-1.8688           44.168       NO       
+      P180-1.8689          44.1338       NO       
+      P180-1.8690          44.0414       NO       
+      P180-1.8771          41.8878       NO       
+      P180-1.8772           41.849       NO       
+      P180-1.8773          41.8255       NO       
+      P180-1.8774          41.8148       NO       
+      P180-1.8775          41.8105       NO       
+      P180-1.8776           41.809       NO       
+      P180-1.8777          41.8085       NO       
+      P180-1.8778          41.8084       NO       
+      P180-1.8779          41.8084       NO       
+      P180-1.8780          41.8084       NO       
+      P180-1.8781          41.8084       NO       
+      P180-1.8782          41.8085       NO       
+      P180-1.8783           41.811       NO       
+      P180-1.8784          41.8278       NO       
+      P180-1.8785           41.882       NO       
+      P180-1.8786          41.8846       NO       
+      P180-1.8787          44.7374       NO       
+      P180-1.8788          44.6194       NO       
+      P180-1.8789          44.5626       NO       
+      P180-1.8790          44.5381       NO       
+      P180-1.8791          44.5283       NO       
+      P180-1.8792          44.5247       NO       
+      P180-1.8793          44.5234       NO       
+      P180-1.8794           44.523       NO       
+      P180-1.8795          44.5228       NO       
+      P180-1.8796          44.5228       NO       
+      P180-1.8797          44.5227       NO       
+      P180-1.8798          44.5228       NO       
+      P180-1.8799          44.5245       NO       
+      P180-1.8800          44.5258       NO       
+      P180-1.8801          44.4298       NO       
+      P180-1.8802          43.5384       NO       
+     P180-1.10386          40.5783       NO       
+     P180-1.10392          39.4611       NO       
+     P180-1.10393          43.5108       NO       
+     P180-1.10398          39.1769       NO       
+     P180-1.10399          42.8035       NO       
+     P180-1.10404          39.1219       NO       
+     P180-1.10405          42.6603       NO       
+     P180-1.10410          39.1153       NO       
+     P180-1.10411          42.6417       NO       
+     P180-1.10416           39.115       NO       
+     P180-1.10417          42.6407       NO       
+     P180-1.10422           39.115       NO       
+     P180-1.10423          42.6407       NO       
+     P180-1.10428           39.115       NO       
+     P180-1.10429          42.6407       NO       
+     P180-1.10434           39.115       NO       
+     P180-1.10435          42.6407       NO       
+     P180-1.10440           39.115       NO       
+     P180-1.10441          42.6409       NO       
+     P180-1.10446          39.1152       NO       
+     P180-1.10447          42.6415       NO       
+     P180-1.10452          39.1157       NO       
+     P180-1.10453          42.6432       NO       
+     P180-1.10458          39.1172       NO       
+     P180-1.10459          42.6479       NO       
+     P180-1.10464          39.1201       NO       
+     P180-1.10465           42.659       NO       
+     P180-1.10470          39.1244       NO       
+     P180-1.10471          42.6802       NO       
+     P180-1.10476          39.1228       NO       
+     P180-1.10477          42.7085       NO       
+     P180-1.10594          39.0571       NO       
+     P180-1.10595          38.9937       NO       
+     P180-1.10596          38.9934       NO       
+     P180-1.10597          38.9972       NO       
+     P180-1.10598          39.0008       NO       
+     P180-1.10599          39.0023       NO       
+     P180-1.10600          39.0025       NO       
+     P180-1.10601          39.0024       NO       
+     P180-1.10602          39.0026       NO       
+     P180-1.10603          39.0038       NO       
+     P180-1.10604            39.01       NO       
+     P180-1.10605          39.0355       NO       
+     P180-1.10606          39.1303       NO       
+     P180-1.10607          39.4617       NO       
+     P180-1.10608          40.5892       NO       
+     P180-1.10609          42.6265       NO       
+     P180-1.10610          42.5369       NO       
+     P180-1.10611          42.5514       NO       
+     P180-1.10612          42.5668       NO       
+     P180-1.10613          42.5768       NO       
+     P180-1.10614          42.5802       NO       
+     P180-1.10615          42.5807       NO       
+     P180-1.10616          42.5809       NO       
+     P180-1.10617          42.5818       NO       
+     P180-1.10618          42.5855       NO       
+     P180-1.10619          42.6005       NO       
+     P180-1.10620          42.6581       NO       
+     P180-1.10621          42.8703       NO       
+     P180-1.10622          43.6288       NO       
+  
+  
+  *amplitude, name=AMP-1
+  *Step, name=Step-1, nlgeom=NO
+  *output, field
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *Step, name=Step-1, nlgeom=NO
+  *Step, name=Step-1, nlgeom=NO
+  *static
+  *boundary
+  *boundary
+  *dsload
+  *output, field
+  *nodeoutput
+  *elementoutput, directions=YES
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *endstep
+  *Step, name=Step-1, nlgeom=NO
+  *static
+  *boundary
+  *boundary
+  *endstep
+
+     - (RAMP) OR (STEP) - INDICATE USE OF DEFAULT AMPLITUDES ASSOCIATED WITH THE STEP
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                 10788
+          NUMBER OF NODES IS                                    12544
+          NUMBER OF NODES DEFINED BY THE USER                   12544
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                37632
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   2.8000    
+       SYSTEM TIME (SEC)    =  0.90000    
+       TOTAL CPU TIME (SEC) =   3.7000    
+       WALLCLOCK TIME (SEC) =          5
+1
+
+   Abaqus 3DEXPERIENCE R2018x                                  Date 23-Nov-2024   Time 21:23:03
+   For use by INDIAN INSTITUTE OF TECHNOLOGY under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    1  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     S T A T I C   A N A L Y S I S
+
+
+                                                                                          
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                0.100    
+          AND A TOTAL TIME PERIOD OF                            1.00    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-05
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
+
+     LINEAR EQUATION SOLVER TYPE         DIRECT SPARSE
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1          2.00E+10               47                266
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+                              WITH      1 WARNING MESSAGES ON THE DAT FILE
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   25.900    
+       SYSTEM TIME (SEC)    =  0.80000    
+       TOTAL CPU TIME (SEC) =   26.700    
+       WALLCLOCK TIME (SEC) =         31

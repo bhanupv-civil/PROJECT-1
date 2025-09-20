@@ -1,0 +1,26 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.openAcis('C:/Users/Admin/Desktop/slender.sat', scaleFromFile=OFF)
+mdb.models['Model-1'].PartFromGeometryFile(combine=False, dimensionality=
+    THREE_D, geometryFile=mdb.acis, name='slender', type=DEFORMABLE_BODY)
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=200.0)
+del mdb.models['Model-1'].sketches['__profile__']
+del mdb.models['Model-1'].parts['slender']
+mdb.openAcis('C:/Users/Admin/Desktop/bhanu term project/30deg(69.28).sat', 
+    scaleFromFile=OFF)
+mdb.models['Model-1'].PartFromGeometryFile(combine=False, dimensionality=
+    THREE_D, geometryFile=mdb.acis, name='deg30', type=DEFORMABLE_BODY)
+del mdb.models['Model-1'].parts['deg30']
+# Save by Admin on 2024_11_20-11.22.09; build 2018 2017_11_07-22.51.41 127140

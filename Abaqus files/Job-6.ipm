@@ -1,0 +1,15 @@
+<?xml version="1.0"?><msgwrapper><Started><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Job-6</jobName><clientHost type="string">DESKTOP-M4VAJAV</clientHost><handle type="integer">0</handle></Started>
+<Warning><message type="string">84 nodes may have incorrect normal definitions. The nodes have been identified in node set WarnNodeIncorrectNormal.</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Job-6</jobName></Warning>
+<Warning><message type="string">108 nodes may have incorrect normal definitions. The nodes have been identified in node set WarnNodeIncorrectNormal.</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Job-6</jobName></Warning>
+<Warning><message type="string">FOR *TIE PAIR (ASSEMBLY_S_SURF-25-ASSEMBLY_M_SURF-25), ADJUSTED NODES WITH VERY SMALL ADJUSTMENTS WERE NOT PRINTED. SPECIFY *PREPRINT,MODEL=YES FOR COMPLETE PRINTOUT.</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Job-6</jobName></Warning>
+<Warning><message type="string">108 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Job-6</jobName></Warning>
+<Odb_File><file type="string">C:\temp\Job-6.odb</file><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Job-6</jobName></Odb_File>
+<Completed><message type="string">Analysis phase complete</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Job-6</jobName></Completed>
+<Started><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-6</jobName><clientHost type="string">DESKTOP-M4VAJAV</clientHost><handle type="integer">8672</handle></Started>
+<Step><stepId type="integer">1</stepId><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-6</jobName></Step>
+<Odb_Frame><step type="integer">0</step><frame type="integer">0</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-6</jobName></Odb_Frame>
+<MEMORY_ESTIMATE><memory type="float">398</memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-6</jobName></MEMORY_ESTIMATE>
+<PHYSICAL_MEMORY><physical_memory type="float">5085</physical_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-6</jobName></PHYSICAL_MEMORY>
+<MINIMUM_MEMORY><minimum_memory type="float">78</minimum_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-6</jobName></MINIMUM_MEMORY>
+<Completed><message type="string">Analysis phase complete</message><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-6</jobName></Completed>
+<JOB_COMPLETED><jobName type="string">Job-6</jobName><time type="string">Mon Nov 18 19:33:00 2024</time></JOB_COMPLETED></msgwrapper>
